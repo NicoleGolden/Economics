@@ -73,20 +73,45 @@
 </head>
 
 <body>
-    <header>
-        <nav>
-            <a href="/"><img alt="Logo" src="image/logo.png" height="150"></a>
-            <ul>
-                <li>Home</li>
-                <li><a href="#" onClick="toggleDarkMode();" id="colorToggle">Dark Mode</a></li>
-                <li><a href="#">Machine Learning</a></li>
-                <li><a href="#">Econometrics</a></li>
-                <li><a href="https://github.com/NicoleGolden" target="_blank">GitHub &nearr;</a></li>
-            </ul>
-        </nav>
-        <h1>Nicole Golden</h1>
-        <p>Data Scientist | PhD in Economics</p>
+        <header class="site-header">
+        <div class="container">
+            <nav class="navbar navbar-light navbar-expand-sm font-weight-lighter border-bottom">
+            
+                <!-- Header Image: take to home page -->
+                <a href="https://nicolegolden.github.io/Economics/"><img alt="Logo" src="image/logo.png" height="150"></a>
+
+                
+                <div class="collapse navbar-collapse" id="navbar-collapse">
+                    <div class="d-flex ml-sm-auto">
+                        <ul class="navbar-nav ml-auto lead d-inline-flex">
+                            
+                            <!--- Dark Mode button-->
+                            <li>Home</li>
+                            
+                            <!--- Dark Mode button-->
+                            <li><a href="#" onClick="toggleDarkMode();" id="colorToggle">Dark Mode</a></li>
+                            
+                            <!--- About Me page-->
+                            <li class="nav-item 
+                            active">
+                            <a class="nav-link py-2 px-3" href="about.html" data-category="nav">About Me</a></li>
+                            <li class="nav-item 
+                                dropdown">
+                                
+                            <!--- GitHub page-->
+                            <li><a href="https://github.com/NicoleGolden/" target="_blank">GitHub &nearr;</a></li>
+                
+                        </ul>
+                    </div>
+                </div>
+            </nav>
+    
+    
+            <h1>Nicole Golden</h1>
+            <p>Data Scientist | PhD in Economics</p>
+            </div>
     </header>
+        
     <main>
         <hr>
         <section>
@@ -122,3 +147,4 @@
 </body>
 
 </html>
+    
