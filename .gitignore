@@ -1,9 +1,9 @@
-*.nc
 *.DS_store
+*.Rhistory
+Economics/assets/pdf/cv.docx
+CNAME
 *.dat
 *.apk
 *.dex
 *.log
-*.Rhistory
-assets/pdf/cv.docx
-CNAME
+*.nc
