@@ -126,7 +126,7 @@
             
             <!--------Blog: start here-------->      
             <h1>Text Analysis: <br> What Do Economists Care About?</h1>
-            <p>Author: Nicole Golden<br> 
+            <p style="color:gray;">Author: Nicole Golden<br> 
                 Date: March 17, 2022 </p>
             
             <center>
@@ -140,7 +140,7 @@
             
             <h2> Chapter 1: The Words in a Cloud</h2>
             
-            <p class="lead">
+            <p>
                 "What topics do economists care about?" In an intro econometrics class, the professor I was TAing for asked this question to the young undergraduate students. Behind the screen, there was silence for a moment - they were in deep thought. These eighty aspiring future economists could potentially rock the global economy. As an economics PhD student myself, I have to constantly think about this question while constructing my academic paper. 
                 
                 <br><br>
@@ -156,8 +156,7 @@
             
             <h2> Chapter 2. Text Data </h2>
             
-             <p class="lead"> 
-                
+            <p>                
                  (You can find the data and code in my <a href="https://github.com/NicoleGolden/TextAnalysis_project/" target="_blank">GitHub page</a>.)
             </p>
             
@@ -165,7 +164,7 @@
             
             <h2>Data Collection </h2>
             
-            <p class="lead">
+            <p>
                 The data used in this analysis is compiled with multiple zoom chat records in .txt format. The time period is the first two weeks of my econometrics class. All identity-related information is scraped off so that no student can be identified. 
             </p>
             
@@ -173,7 +172,7 @@
             
             <h2>Data Cleaning </h2>
             
-            <p class="lead">
+            <p>
                 Texts irrelevant to economics (e.g., lol, hi) were removed. A deeper layer of cleaning includes grouping the words when necessary. For example, "covid-19" was identified as separate words "covid" and "19" by the <span style="font-weight: 600">stringr</span> package in R. I rearranged the word as "covid19." Another example is that "economic growth" was mentioned repeatedly, so I grouped the two words as "EconomicGrowth."
                 
                 <br><br>
@@ -201,7 +200,7 @@
             
             <h2>Chapter 3. So, What Topics Do Economists Care About? </h2>
             
-             <p class="lead">
+            <p>
 
                  (The rest of the article will just circle around Figure 2.)</p>
 
@@ -212,7 +211,7 @@
                  </center>
                  
                  <br><br>
-            <p class="lead">
+            <p>
                  So, what topics do economists care about? At least, what the students think "what the economists care about?" This question can be rephrased as "What problems in the world are happening that need economists' attention?" The students have a say. Just look at Figure 2 - they largely voted for "inflation." That was back in October 2021 when the Covid was still raging in the US. The word "covid19" ranked just 25 out of 28 based on the figure. So, either the students were really wary of the covid, or the inflation problem at the time was really worrisome. In their economic essays (for my other economics classes), some students wrote that supply chain became an issue. It became too expensive to get a hold of an iPad, or games were out of stock quickly. On the other hand, the demand also grew very strong. 
                  
                  <br><br>
