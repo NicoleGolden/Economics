@@ -4,3 +4,5 @@ Hi there! Welcome to my webpage.
 
 ###### :+1: Theme credit
 This theme is a minimalist Jekyll theme written by https://github.com/heiswayi/thinkspace.
+
+Simple icons: https://feathericons.com/
