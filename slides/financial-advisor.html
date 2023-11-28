@@ -1,0 +1,188 @@
+<!doctype html>
+<html lang="en">
+	<head>
+		<meta charset="utf-8">
+		<title>reveal.js - Barebones</title>
+		
+        <!----------------------- load external sources ---------------------->
+        <link rel="stylesheet" href="../slides/dist/reveal.css">
+        <!---- white background theme---->
+		<link rel="stylesheet" href="../slides/dist/theme/white.css" id="theme">
+		<link rel="stylesheet" href="../slides/plugin/highlight/monokai.css">
+        
+        <!---- black background theme----->
+        <!---- link rel="stylesheet" href="../dist/theme/black.css" id="theme"--->
+        
+        <!---- serif background theme----->
+        <!----link rel="stylesheet" href="../dist/theme/serif.css" id="theme"--->
+        
+        <!---- night background theme----->
+        <!----link rel="stylesheet" href="../dist/theme/night.css" id="theme"--->
+
+	</head>
+	<body>
+
+		<div class="reveal">
+			<div class="slides">
+
+                <!--------- Title page ---------->
+
+				<section data-transition="fade-in fade-out" data-background="#272727">
+                    <h1 style="color:#f27b25"><b>Discussion:</b></h1>
+                    <h3 style="color:#f27b25">The Market for Financial Advice</h3>
+                    <p style="color:#f27b25; font-size:25px">Authors: Mullainathan, S., Noeth, M., & Schoar, A. (2012)</p>
+                    <p style="color:#f27b25; font-size:25px"> Presenter: Nicole Golden</p>
+				</section>                
+                
+                <!--------- Google Trends ---------->
+                <section data-background="../slides/image/GoogleTrends.png" data-background-size="contain"></section>
+
+                <!--------- Top services ---------->
+                <section data-background="../slides/image/word-cloud.jpeg" data-background-size="contain"></section>
+
+   
+                <!--------- Background ---------->
+                <section>
+					<section data-transition="fade-in fade-out">
+						<h3 style="color:#f27b25">Background</h3>
+                    <ul>
+                        <li><span style="font-weight:bold">Past literature</span>: HH bad at choosing portfolios</li>
+                        <li><span style="font-weight:bold">73%</span> individuals consult financial advisers before purchasing</li>
+                        <li><span style="font-weight:bold">"Good advice"</span>: low cost, diversified, <a href="https://www.investor.gov/introduction-investing/investing-basics/investment-products/mutual-funds-and-exchange-traded-4#:~:text=Index%20funds%20have%20generally%20followed,and%20selling%20securities%20very%20often." target='_blank'>index-fund</a> approach</li>
+                    </ul>
+					</section>
+
+                <!--------- An audit study ---------->
+					<section data-transition="fade-in fade-out">
+						<h3 style="color:#f27b25">An Audit Study</h3>
+                    <ul>
+                        <li>Want to test <span style="font-weight:bold">quality of advice</span> to <a href="https://www.sofi.com/learn/content/retail-investors/#:~:text=Retail%20investors%20are%20non%2Dprofessional,transactions%20compared%20to%20institutional%20investors." target="_blank">retail investors</a></li>
+                        <li>Lower end (pure investment) retail advisers: <span style="font-weight:bold">paid based on fees they generate</span>, not performance of portfolio</li>
+                        <li><span style="font-weight:bold">Question</span>: Do advisers de-bias clients / exaggerate baises that help max their fees?</li>
+                    </ul>
+					</section>
+                    
+                    
+                <!--------- 4 treatments ---------->
+					<section data-transition="fade-in fade-out">
+						<h3 style="color:#f27b25">4 Treatments</h3>
+                    <ul>
+                        <li><span style="font-weight:bold">"Chasing fund returns"</span>: 30% in one sector, misaligned interests &#x2192; max fees, less diversified</li>
+                        <li><span style="font-weight:bold">"Employer stocks"</span>: 30% to company stock, aligned interests &#x2192; restructure portfolio</li>
+                        <li><span style="font-weight:bold">Efficient US portfolio</span>: low cost, diversified, index funds</li>
+                        <li><span style="font-weight:bold">"Cash scenario"</span>: hold CDs (control)</li>
+                    </ul>
+					</section>
+                    
+                    <!--------- Table 4 ---------->
+                    <section  data-transition="fade-in fade-out">
+                        <h5 style="color:#f27b25">Are financial advisors supportive or against current strategy?</h5>
+                    <table>
+						<thead>
+							<tr>
+								<th></th>
+                                <th>Overall Sample</th>
+								<th>Company Stock</th>
+								<th>Index Funds</th>
+							</tr>
+						</thead>
+						<tbody>
+							<tr>
+								<td>Supportive</td>
+                                <td><span class="fragment highlight-red">19.41%</span></td>
+								<td>9.68%</td>
+                                <td><span class="fragment highlight-blue">2.44%</span></td>
+							</tr>
+							<tr>
+								<td>Against</td>
+                                <td><span class="fragment highlight-blue">59.22%</span></td>
+								<td>69.35%</td>
+                                <td><span class="fragment highlight-red">85.37%</span></td>
+							</tr>
+						</tbody>
+					</table>
+                        <p style="color:darkgray;font-size:20px">Source: Table 4</p>
+                    </section>
+                    
+                 <!--------- Table 6 ---------->
+                    <section>
+                        <h5 style="color:#f27b25">Adviser's asset allocation recommendations</h5>
+                    <table>
+						<thead>
+							<tr>
+								<th></th>
+                                <th>Overall</th>
+							</tr>
+						</thead>
+						<tbody>
+							<tr>
+								<td>Actively managed funds</td>
+                                <td><span class="fragment highlight-red">49.65%</span></td>
+							</tr>
+							<tr>
+								<td>Index funds</td>
+                                <td><span class="fragment highlight-red">7.34%</span></td>
+							</tr>
+						</tbody>
+					</table>
+                    <p style="color:darkgray;font-size:20px">Source: Table 6</p>
+
+                    </section>
+
+                    
+                <!--------- main finding ---------->
+					<section data-transition="fade-in fade-out">
+						<h3 style="color:#f27b25">Behavioral Bias</h3>
+                    <ul>
+                        <li><span style="font-weight:bold">Fail to de-bias clients</span> / exaggerate existing biases</li>
+                        <li>Push for funds that maximize fees</li>
+                        <li>Some cases: higher expected fees, less diversification, reduce expected returns</li>
+                    </ul>
+					</section>                    
+
+                <!--------- findings ---------->
+					<section data-transition="fade-in fade-out">
+						<h3 style="color:#f27b25">Findings</h3>
+                    <ul>
+                        <li><span style="font-size:33px">Advisers want "active mgmt" 
+                            <br> &#x2192; Pro trend-chasing portfolio, against index portfolio 
+                            &#x2192; bias 👎!</span></li>
+                        <li><span style="font-size:33px">Most ask about demographic info 
+                            <br> &#x2192; Determine risk preference & covariance 
+                            <br>  &#x2192; Not use portfolio theory in many cases 
+                            &#x2192; bias 👎!</span></li>
+                        <li><span style="font-size:33px">Some "catering" 
+                            <br> &#x2192; showed support early on clients' exisiting strategies 
+                            <br> &#x2192; Establish credibility</span></li>
+                    </ul>
+					</section>   
+                </section>
+
+                
+                <section>
+                <!--------- Comments ---------->                    
+                    <section data-transition="concave">
+						<h3 style="color:#f27b25">Future Questions</h3>
+                    <ul>
+                        <li class="fragment">Does the nature and quality of advice depend on adviser's incentives?</li>
+                        <li class="fragment">Does the quality of advice change over time?</li>
+                        <li class="fragment">How does the demand fo rfinancial advice look like and what role does it play in shaping the type advisers that survice in the market?</li>
+                    </ul>
+					</section>
+				</section>                
+                
+                
+                
+                
+                
+                
+			</div>
+		</div>
+
+		<script src="../slides/dist/reveal.js"></script>
+		<script>
+			Reveal.initialize();
+		</script>
+
+	</body>
+</html>
