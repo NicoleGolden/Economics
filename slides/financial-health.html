@@ -1,0 +1,424 @@
+<!doctype html>
+<html lang="en">
+	<head>
+		<meta charset="utf-8">
+		<title>Financial Health</title>
+		
+        
+        
+        <!----------------------- load external sources ---------------------->
+        <link rel="stylesheet" href="../slides/dist/reveal.css">
+        <!---- white background theme---->
+		<link rel="stylesheet" href="../slides/dist/theme/white.css" id="theme">
+		<link rel="stylesheet" href="../slides/plugin/highlight/monokai.css">
+        <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+        <script id="MathJax-script" async
+          src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js">
+        </script>        
+    </head>
+	
+    <body>
+
+		<div class="reveal">
+			<div class="slides">
+          
+                <!----------------------- Wrapped section: Title & About me ----------------------->   
+                <section>
+                    
+                    <!------- Title ------->
+                    <section data-transition="fade-in fade-out" data-background="../slides/image/money2.png">
+                        <h1 style="color:#f27b25;text-align:right"><b>Discussion:</b></h1>
+                        <!--To remove all upper case, use style "text-transform: none;"-->
+                        <h3 style="color:#f27b25;text-align:right;">The Effect of Payday Loan<br>Extended Payment Plans <br> on Financial Health</h3>
+                        <p style="color:#696969; font-size:25px;text-align: right">Author: Nicole Golden (2023)</p>
+				    </section>                
+                
+                    <!------- About Me ------->
+                    <section data-transition="fade-in fade-out" data-background="../slides/image/me.png">
+                        <h3 style="color:#f27b25;margin-left: 200px;">About Me</h3>  
+                        <ul style="font-size:35px;">
+                            <li style="margin-left:230px;line-height:1.8em;"><span style="font-weight:bold;">Page</span>: <a href="https://www.goldeneconomics.com">GoldenEconomics.com</a></li>
+                            <li style="margin-left:230px;line-height:1.8em;"><span style="font-weight:bold;">Education</span>: Ph.D. in Economics, UC Irvine</li>
+                            <li style="margin-left:230px;line-height:1.8em;"><span style="font-weight:bold;">Expertise</span>: Econometrics, ML, Data Science</li>
+                            <li style="margin-left:230px;line-height:1.8em;"><span style="font-weight:bold;">Experience</span>: Academia, Firm,  NGOs</li>
+                            <li style="margin-left:230px;line-height:1.8em;"><span style="font-weight:bold;">Languages</span>: ZH, EN, FR, ES</li>
+                        </ul>    
+                    </section>   
+                    
+                </section>
+            
+                
+                <!----------------------- Wrapped section: Motivation / Overview ----------------------->   
+                <section>
+                    
+                    <!------- Motivation: Why financial health? ------->
+                    <section data-transition="fade-in fade-out">
+						<h3 style="color:#f27b25">Motivation: Why Financial Health?</h3>
+                        <ul style="font-size:35px;line-height:1.5em;">
+                            <li><span style="font-weight:bold;">67%</span> Americans not financially healthy</li>
+                            <li>2020 USC survey data of 6,430 respondents</li>
+                                <ul>    
+                                <img src="../slides/image/finscore.png" alt="finscore" class="center" width="900">
+                                </ul>
+                        </ul>
+                        
+                    <br><p style="color:darkgray;font-size:20px;text-align: left">Source: <a href="https://cfsi-innovation-files-2018.s3.amazonaws.com/wp-content/uploads/2020/10/26135655/2020PulseTrendsReport-Final-1016201.pdf" target="_blank">Financial Health Network (2020)</a>, <a href="https://www.brookings.edu/articles/measuring-the-financial-health-of-americans/" target="_blank">Brookings (2021)</a>, and <a href="https://uasdata.usc.edu/index.php" target="_blank">USC (2020)</a>. The figure and statistics are redacted.</p>                    
+					</section>
+                    
+                    <!------- Motivation: Payday Loans ------->
+                    <section data-transition="fade-in fade-out">
+						<h3 style="color:#f27b25">Motivation: Payday loans</h3>
+                        <ul style="font-size:35px;line-height:1.6em;">
+                            <li><span style="font-weight:bold;">Non-prime credit</span>: 12 million payday loan users</li>
+                            <li><span style="font-weight:bold;">Payday loan</span>:
+                                <ul>
+                                    <li>Small-dollar, short-term, unsecured</li>
+                                    <li>High APRs: 300% ~ 500%</li>
+                                    <li>22 states (effectively) banned</li> 
+                                </ul>
+                            <li>15 states passed <span style="font-weight:bold;">extended payment plans</span> to protect payday loan borrowers</li>
+                        </ul>
+                    <br><br><p style="color:darkgray;font-size:20px;text-align: left">Source: <a href="https://files.consumerfinance.gov/f/documents/cfpb_consumer-use-of-payday-auto_title-pawn_loans_research-brief_2021-05.pdf" target="_blank">CFPB (2021)</a>.</p>                          
+					</section>  
+
+                    <!------- Motivation: Policy Question  ------->
+                    <section data-transition="fade-in fade-out">
+						<h3 style="color:#f27b25">Research Question</h3>
+                        <ul style="font-size:35px;line-height:1.6em;">
+                            <li><span style="font-weight:bold;">Do extended payment plans improve financial health?</span></li>
+                            <li><span style="font-weight:bold;">Wang and Burke (2022)</span>: 
+                                <ul>
+                                    <li>Texas, Austin, Dallas require disclosing cost of payday loans vs other credit products</li>
+                                    <li>Led to significant <span style="color:red;">decline</span> in payday loan volume</li>
+                                </ul>
+                            </li>
+                            <li><span style="font-weight:bold;">Contribution</span>: a broader payday loan policy applied to more states</li>      
+                    </ul>
+					</section>                      
+
+                    <!------- An Overview ------->
+                    <section data-transition="fade-in fade-out">
+						<h3 style="color:#f27b25">Overview</h3>
+                        <ul style="font-size:35px;line-height:1.6em;">
+                            <li>Extended payment plans improve financial health by <span style="color:red;">reducing</span>:
+                                <ul>    
+                                    <li><span style="font-weight:bold;">Past due amount</span> by $25</li> 
+                                    <li><span style="font-weight:bold;">Original charge-off</span> by $49</li>
+                                    <li><span style="font-weight:bold;">Delinquency rate</span> by 2.9%</li>
+                                    <li><span style="font-weight:bold;">Charge-off or debt-in-collections rate</span> by 2.7%</li>
+                                </ul>
+                            </li>
+                        </ul>
+					</section>                        
+                
+                    <!------- Roadmap ------->
+                    <section data-transition="fade-in fade-out">
+						<h3 style="color:#f27b25">Roadmap</h3>
+                        <ul style="font-size:35px;line-height:1.6em;">
+                            <li>Background</li>                            
+                            <li>Data</li>
+                            <li>Model</li>
+                            <li>Results</li>
+                            <li>Conclusions & Discussions</li>
+                            <li>Q & A</li>
+                            
+                        </ul>
+					</section>     
+                    
+                </section>
+                    
+                <!----------------------- Wrapped section: Background / Data ----------------------->    
+                <section>                
+
+                    <!------- Background: payday loans ------->
+                    <section data-transition="fade-in fade-out">
+						<h3 style="color:#f27b25">Background: Payday Loans</h3>
+                        <ul style="font-size:35px;line-height:1.6em;">
+                            <li>Small-dollar, <span style="font-weight:bold;">legal</span> in 29 states (2020)</li>
+                            <li><span style="font-weight:bold;">Loan limit</span> $500, unsecured, repay in next payday</li>
+                            <li><span style="font-weight:bold;">High APRs</span>: 300% ~ 500% (credit cards: 12% ~ 30%)</li>
+                            <li><span style="font-weight:bold;">Features</span>: "cash, quick, fast, easy, emergency bills"</li>
+                            <li><span style="font-weight:bold;">Rollover</span>: charges will double!</li>
+                            <li>"Debt Traps"</li>
+                    </ul>
+					</section>   
+                    
+                    <!------- Background: extended payment plans ------->
+                    <section data-transition="fade-in fade-out">
+						<h3 style="color:#f27b25">Background: <br> Extended Payment Plans</h3>
+                        <ul style="font-size:35px;line-height:1.6em;">
+                            <li>Key features:</li> 
+                            <ul>
+                                <li>Repay in 3 ~ 4 <span style="font-weight:bold;">installments</span> (salient) with <span style="font-weight:bold;">zero charges</span></li> 
+                                <li><span style="font-weight:bold;">Minimum repayment term</span> 60 ~ 90 days</li>
+                                <li><span style="font-weight:bold;">Limit</span> use to once a year</li>
+                                <li><span style="font-weight:bold;">Eligible</span> only if reach a threshold of rollovers
+                                <li>Require lenders to <span style="font-weight:bold;">disclose</span> availability of the plans</li>
+                            </ul> 
+                        </ul>
+					</section>   
+
+                    <!------- Data ------->
+                    <section data-transition="fade-in fade-out">
+						<h3 style="color:#f27b25">Data</h3>
+                        <ul style="font-size:30px;line-height:1.6em;">
+                            <li><span  style="color:#f27b25">Clarity Payday Loan Data</span>
+                                <ul>
+                            <li><span style="font-weight:bold;">Coverage</span>: 60 million or 70% of non-prime consumers</li>
+                            <li><span style="font-weight:bold;">Period</span>: 2015 ~ 2020</li>
+                            <li><span style="font-weight:bold;">Borrowers' characteristics</span>: age, net monthly income, pay frequency, housing status, months at address
+                            <li><span style="font-weight:bold;">Financial health</span>: amount past due, original charge-off, delinquency rate, charge-off or debt-in-collections rate</li>
+                            <li><span style="font-weight:bold;">Final data</span>: aggregated at quarterly level for each state (14 control and 5 treated states, in 2020 dollars)</li>
+                                </ul>   
+                            </li>
+                            <li><span style="color:#f27b25">Legal status Data</span>
+                                <ul>
+                                    <li>Refer to each state's deferred deposit transaction law</li>
+                                </ul>
+                            </li>
+                        </ul>
+					</section>                      
+                
+
+                       
+                
+                </section>   
+                
+                <!----------------------- Wrapped section: Model ----------------------->
+                <section>                
+                
+                    <!------- Model: SDiD ------->
+                    <section data-transition="fade-in fade-out">
+						<h3 style="color:#f27b25">Model: Synthetic DiD</h3>
+                        <ul style="font-size:35px;line-height:1.6em;">
+                            <span style="font-size:30px;">
+                            \[
+                            \tau^{SDID} = argmin_{\mu, \alpha, \beta, \tau} \Bigl\{\sum_{i = 1}^{N} \sum_{t = 1}^{T} (Y_{it} - \mu - \alpha_{i} - \beta_{t} - \tau D_{it})^{2} \hat{w}_{i} \hat{\lambda}_{t} \Bigl\}
+                            \]
+                            </span>    
+                            <li>\( Y_{it} \) = financial health in state \(i \), quarter \(t \)</li>
+                            <li>\( \mu \) = intercept</li>
+                            <li>\( \alpha_{i} \), \( \beta_{t} \) = state, quarter fixed effects</li>
+                            <li>\( \tau \) = ATT</li>                            
+                            <li>\( D_{it} \) = 1 if passed extended payment plans, 0 otherwise</li>
+                            <li>\( \hat{w}_{i} \), \( \hat{\lambda}_{t} \) = unit, time weights</li>
+                        </ul>
+					</section>  
+                    
+                    <!------- Model: SDiD: Unit Weights ------->
+                    <section data-transition="fade-in fade-out">
+						<h3 style="color:#f27b25">Synthetic DiD: Unit Weights</h3>
+                        <ul style="font-size:35px;line-height:1.6em;">
+                            <span style="font-size:30px;">
+                            \[ w^{sdid} = argmin\| \bar{y}_{pre, treat} - Y_{pre, control} * w_{control}\|_{2}^{2} + \zeta T_{pre}\|w_{control}\|^2_{2} \]
+                            </span>
+                            <li>(Pre-treat) Generate unit weights that minimize difference between outcomes of treated & weighted average of control units </li>
+                            <li>Gives parallel trend</li>
+                            <li>Exploits advantages of DiD & SC</li>
+                        </ul>
+					</section>  
+                    
+                    <!------- Model: SDiD: Time Weights ------->
+                    <section data-transition="fade-in fade-out">
+						<h3 style="color:#f27b25">Synthetic DiD: Time Weights</h3>
+                        <ul style="font-size:35px;line-height:1.6em;">
+                            <span style="font-size:30px;">
+                            \[ \lambda^{sdid} = argmin\| \bar{y}_{post, control} - \lambda_{pre}Y_{pre, control} + \lambda_{0}\|_{2}^{2} \]
+                            </span>
+                            <li>(Control units) Generate time weights that minimize difference of post-treat & weighted average of pre-treat outcomes</li>
+                            <li>Increase precision of treatment effect estimates</li>
+                        </ul>
+					</section>  
+                
+                    <!------- Model: SDiD: Staggared Adoption ------->
+                    <section data-transition="fade-in fade-out">
+						<h3 style="color:#f27b25">Synthetic DiD: Staggered Adoption</h3>
+                        <ul style="font-size:35px;line-height:1.6em;">
+                            <span style="font-size:30px;">
+                            \[ \frac{8}{65}ATT_{DE} + \frac{5}{65}ATT_{FL} + \frac{22}{65}ATT_{LA} + \frac{13}{65}ATT_{NV} + \frac{17}{65}ATT_{UT} \]
+                            </span>
+                            <li>Run synthetic DiD for each treated state</li>
+                            <li>Get 5 ATTs</li>
+                            <li>Generate final ATT by reweighting each ATT with ratio of treated period and total periods</li>
+                        </ul>
+					</section>                      
+                </section>
+                
+                
+                <!----------------------- Wrapped section: Results / Robustness Check ----------------------->
+                <section>
+
+                    <!------- Plot: SDID for NV ------->                    
+                    <section data-transition="fade-in fade-out">
+                        <h3 style="color:#f27b25">ATT for Nevada</h3>
+                        <img src="../slides/image/AmountPastDue_NV.png" alt="AmountPastDue_NV" class="center" width="700">
+                    </section>    
+                    
+                    <!------- Table: main results ------->
+					<section data-transition="fade-in fade-out">
+                        <h3 style="color:#f27b25">Main results</h3>
+                    <table style="font-size:30px;">
+						<thead>
+							<tr>
+                                <!-- Column 1 -->
+                                <th> </th>
+                                <!-- Column 2 -->
+								<th style="text-align:center">(1)</th>
+                                <!-- Column 3 -->
+								<th style="text-align:center">(2)</th>
+							</tr>
+						</thead>
+						
+                        <tbody>
+							<tr>
+                                <!-- row 1 -->                                                                
+                                <td><span style="font-weight:bold;">Amount Past Due</span></td>
+								<td style="text-align:center">−24.4931* <br> (14.4660)</td>
+								<td style="text-align:center">−25.3166* <br> (13.8418)</td>
+                            </tr>
+							
+                            <tr>
+                                <!-- row 2 -->                                                                
+                                <td><span style="font-weight:bold;">Original Charge-Off</span></td>
+								<td style="text-align:center">−40.0734** <br> (18.7904)</td>
+                                <td style="text-align:center">−49.4988** <br> (19.9673)</td>
+                            </tr>
+							
+                            <tr>
+                                <!-- row 3 -->                                                                
+                                <td><span style="font-weight:bold;">Delinquency Rate</span></td>
+								<td style="text-align:center">−0.0117** <br> (0.0546)</td>
+								<td style="text-align:center">−0.0289** <br> (0.0136)</td>
+                            </tr>                            
+
+                            <tr>
+                                <!-- row 4 -->                                                                
+                                <td><span style="font-weight:bold;">Charge-Off or Debt-in-Collections Rate</span></td>
+								<td style="text-align:center">0.0211* <br> (0.0109)</td>
+								<td style="text-align:center">−0.0265** <br> (0.0135)</td>
+                            </tr> 
+                            
+                            <tr>
+                                <!-- row 5 -->                                                                
+                                <td>Observations</td>
+								<td style="text-align:center">456</td>
+								<td style="text-align:center">456</td>
+                            </tr> 
+                            
+                        </tbody>
+					</table>
+                        
+                        <br><p style="color:darkgray;font-size:20px;text-align: right">Notes: Column (1) only includes state & quarter FE. Column (2) also includes borrowers' characteristics.</p>
+					</section>                                   
+                            
+                    <!------- Table: Robustness Check ------->
+					<section data-transition="fade-in fade-out">
+                        <h3 style="color:#f27b25;">Robustness Check</h3>
+                    <table style="font-size:30px;">
+						<thead>
+							<tr>
+                                <!-- Column 1 -->
+                                <th> </th>
+                                <!-- Column 2 -->
+								<th style="text-align:center">(1)</th>
+                                <!-- Column 3 -->
+								<th style="text-align:center">(2)</th>
+							</tr>
+						</thead>
+						
+                        <tbody>
+							<tr>
+                                <!-- row 1 -->                                                                
+                                <td><span style="font-weight:bold;">Amount Past Due</span></td>
+								<td style="text-align:center">0.3779 <br> (0.9401)</td>
+								<td style="text-align:center">0.3218 <br> (0.4370)</td>
+                            </tr>
+							
+                            <tr>
+                                <!-- row 2 -->                                                                
+                                <td><span style="font-weight:bold;">Original Charge-Off</span></td>
+								<td style="text-align:center">−2.0309 <br> (1.5546) </td>
+                                <td style="text-align:center">−2.2471 <br> (2.8075)</td>
+                            </tr>
+							
+                            <tr>
+                                <!-- row 3 -->                                                                
+                                <td><span style="font-weight:bold;">Delinquency Rate</span></td>
+								<td style="text-align:center">−0.0069 <br> (0.0115)</td>
+								<td style="text-align:center">−0.0061 <br> (0.0150)</td>
+                            </tr>                            
+
+                            <tr>
+                                <!-- row 4 -->                                                                
+                                <td><span style="font-weight:bold;">Charge-Off or Debt-in-Collections Rate</span></td>
+								<td style="text-align:center">−0.0019 <br> (0.0017)</td>
+								<td style="text-align:center">−0.0010 <br> (0.0010)</td>
+                            </tr> 
+                            
+                            <tr>
+                                <!-- row 5 -->                                                                
+                                <td>Observations</td>
+								<td style="text-align:center">408</td>
+								<td style="text-align:center">408</td>
+                            </tr> 
+                            
+                        </tbody>
+					</table>
+                        
+                        <br><p style="color:darkgray;font-size:20px;text-align: right">Notes: Column (1) only includes state & quarter FE. Column (2) also includes borrowers' characteristics.</p>
+					</section>                  
+                    
+                </section>
+                    
+                <!----------------------- Wrapped section: Conclusions / Limitations & Future Studies ----------------------->
+              
+                 <section>
+                
+                     <!------- Conclusions ------->                    
+                    <section data-transition="fade-in fade-out">
+						<h3 style="color:#f27b25;line-height:1.6em;">Conclusions</h3>
+                    <ul style="line-height:1.6em;">
+                        <li>Payday loan borrowers prone to "debt traps"</li>
+                        <li>Using best existing coverage of Clarity payday loan data</li>
+                        <li>Uncover the effect of extended payment plans on financial health</li>
+                        <li>These plans indeed have positive effects on financial health</li>
+                    </ul>
+					</section>
+                
+                     <!------- Limitations & Future Studies ------->                    
+                    <section data-transition="fade-in fade-out">
+						<h3 style="color:#f27b25;line-height:1.6em;">Limitations & Future Work</h3>
+                    <ul style="line-height:1.6em;">
+                        <li><span style="font-weight:bold;">Limitations</span>:
+                            <ul><li>Only 5 treated states (10 excluded)</li>
+                                <li>More comprehensive study if data available</li>
+                            </ul>
+                        </li>
+                        <li><span style="font-weight:bold;">Future work</span>:
+                            <ul>
+                                <li>Both low & high income borrow payday loans</li>
+                                <li>Both may experience (-) income volatility</li>
+                                <li>Study heterogeneous treatment effect</li>
+                            
+                            </ul>
+                        </li>
+                    </ul>
+					</section>
+                     
+                     <!------- Q & A ------->                    
+                    <section data-transition="fade-in fade-out" data-background="../slides/image/Q_A.png">
+                         <h1 style="color:#f27b25">&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; Q & A</h1>
+                     </section>
+				
+                </section>                
+                
+			</div>
+		</div>
+        
+		<script src="../slides/dist/reveal.js"></script>
+		<script>
+			Reveal.initialize();
+		</script>
+
+	</body>
+</html>
