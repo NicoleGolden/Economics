@@ -193,7 +193,7 @@
                         <ul style="font-size:35px;line-height:1.6em;">
                             <span style="font-size:30px;">
                             \[
-                            \tau^{SDID} = argmin_{\mu, \alpha, \beta, \tau} \Bigl\{\sum_{i = 1}^{N} \sum_{t = 1}^{T} (Y_{it} - \mu - \alpha_{i} - \beta_{t} - \tau D_{it})^{2} \hat{w}_{i} \hat{\lambda}_{t} \Bigl\}
+                            \hat{\tau}^{SDID} = argmin_{\mu, \alpha, \beta, \tau} \Bigl\{\sum_{i = 1}^{N} \sum_{t = 1}^{T} (Y_{it} - \mu - \alpha_{i} - \beta_{t} - \tau D_{it})^{2} \hat{w}_{i} \hat{\lambda}_{t} \Bigl\}
                             \]
                             </span>    
                             <li>\( Y_{it} \) = financial health in state \(i \), quarter \(t \)</li>
@@ -203,19 +203,22 @@
                             <li>\( D_{it} \) = 1 if passed extended payment plans, 0 otherwise</li>
                             <li>\( \hat{w}_{i} \), \( \hat{\lambda}_{t} \) = unit, time weights</li>
                         </ul>
-					</section>  
+                        
+                        <br><p style="color:darkgray;font-size:20px;text-align: left">Source: <a href="https://www.aeaweb.org/articles?id=10.1257/aer.20190159" target="_blank">Arkhangelsky et al. (2021).</a></p>
+                    </section>  
                     
                     <!------- Model: SDiD: Unit Weights ------->
                     <section data-transition="fade-in fade-out">
 						<h3 style="color:#f27b25">Synthetic DiD: Unit Weights</h3>
                         <ul style="font-size:35px;line-height:1.6em;">
                             <span style="font-size:30px;">
-                            \[ w^{sdid} = argmin\| \bar{y}_{pre, treat} - Y_{pre, control} * w_{control}\|_{2}^{2} + \zeta T_{pre}\|w_{control}\|^2_{2} \]
+                            \[ \hat{w}_{i} = argmin\| \bar{y}_{pre, tr} - (w_{0} + Y_{pre, co}w_{co})\|_{2}^{2} + \zeta T_{pre}\|w_{co}\|^2_{2} \]
                             </span>
-                            <li>(Pre-treat) Generate unit weights that minimize difference between outcomes of treated & weighted average of control units </li>
+                            <li>Match pre-treatment trends between control & treated units</li>
                             <li>Gives parallel trend</li>
                             <li>Exploits advantages of DiD & SC</li>
                         </ul>
+                        <br><br><p style="color:darkgray;font-size:20px;text-align: left">Notes: In a simpler term, \( \sum_{i=1}^{N_{co}}  \hat{w}_{i}Y_{it} \approx N_{tr}^{-1}\sum_{i=N_{co}+1}^{N}Y_{it} \) for all \( t = 1, 2, ..., T_{pre} \).</p>                        
 					</section>  
                     
                     <!------- Model: SDiD: Time Weights ------->
@@ -223,11 +226,12 @@
 						<h3 style="color:#f27b25">Synthetic DiD: Time Weights</h3>
                         <ul style="font-size:35px;line-height:1.6em;">
                             <span style="font-size:30px;">
-                            \[ \lambda^{sdid} = argmin\| \bar{y}_{post, control} - \lambda_{pre}Y_{pre, control} + \lambda_{0}\|_{2}^{2} \]
+                            \[  \hat{\lambda}_{t} = argmin\| \bar{y}_{post, co} - (\lambda_{0} + \lambda_{pre}Y_{pre, co} + \lambda_{0})\|_{2}^{2} \]
                             </span>
-                            <li>(Control units) Generate time weights that minimize difference of post-treat & weighted average of pre-treat outcomes</li>
+                            <li>Balance pre- & post-treatment periods for control units</li>
                             <li>Increase precision of treatment effect estimates</li>
                         </ul>
+                        <br><br><p style="color:darkgray;font-size:20px;text-align: left">Notes: In a simpler term, \( \sum_{t=1}^{T_{pre}}\lambda_{t}Y_{it}\approx T_{post}^{-1}\sum_{T_{pre}+1}Y_{it} \) for all \( i=1, 2, ..., N_{co} \).</p>                            
 					</section>  
                 
                     <!------- Model: SDiD: Staggared Adoption ------->
@@ -241,6 +245,7 @@
                             <li>Get 5 ATTs</li>
                             <li>Generate final ATT by reweighting each ATT with ratio of treated period and total periods</li>
                         </ul>
+                        <br><p style="color:darkgray;font-size:20px;text-align: left">Source: <a href="https://arxiv.org/abs/2301.11859" target="_blank">Clarke et al. (2023).</a></p>                        
 					</section>                      
                 </section>
                 
@@ -252,7 +257,7 @@
                     <section data-transition="fade-in fade-out">
                         <h3 style="color:#f27b25">Result: ATT for Nevada</h3>
                         <img src="../slides/image/AmountPastDue_NV.png" alt="AmountPastDue_NV" class="center" width="700">
-                        <br><p style="color:darkgray;font-size:20px;text-align: right">Notes: The red line represents the treated state, and the gray line is the synthetic control state.</p>                    
+                        <br><p style="color:darkgray;font-size:20px;text-align: left">Notes: The red line represents the treated state, and the gray line is the synthetic control state.</p>                    
                     </section>    
                     
                     <!------- Table: main results ------->
@@ -309,7 +314,7 @@
                         </tbody>
 					</table>
                         
-                        <br><p style="color:darkgray;font-size:20px;text-align: right">Notes: Column (1) only includes state & quarter FE. Column (2) also includes borrowers' characteristics.</p>
+                        <br><p style="color:darkgray;font-size:20px;text-align: left">Notes: Column (1) only includes state & quarter FE. Column (2) also includes borrowers' characteristics.</p>
 					</section>                                   
                             
                     <!------- Table: Robustness Check ------->
@@ -366,7 +371,7 @@
                         </tbody>
 					</table>
                         
-                        <br><p style="color:darkgray;font-size:20px;text-align: right">Notes: Column (1) only includes state & quarter FE. Column (2) also includes borrowers' characteristics.</p>
+                        <br><p style="color:darkgray;font-size:20px;text-align: left">Notes: Column (1) only includes state & quarter FE. Column (2) also includes borrowers' characteristics.</p>
 					</section>                  
                     
                 </section>
