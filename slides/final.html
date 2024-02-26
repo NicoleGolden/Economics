@@ -1,0 +1,1048 @@
+<!doctype html>
+<html lang="en">
+	<head>
+		<meta charset="utf-8">
+		<title>Nicole Golden: Dissertation</title>
+		
+        
+        <!----------------------- load external sources ---------------------->
+        <link rel="stylesheet" href="../slides/dist/reveal.css">
+        <!---- white background theme---->
+		<link rel="stylesheet" href="../slides/dist/theme/white.css" id="theme">
+		<link rel="stylesheet" href="../slides/plugin/highlight/monokai.css">
+        <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+        <script id="MathJax-script" async
+          src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js">
+        </script>    
+        <script src="../slides/plugin/notes/notes.js"></script>
+        <script>
+            Reveal.initialize({        
+                plugins: [ RevealNotes ]    
+            });
+        </script>
+    
+        <!------- Style for circle number in each chapter ------->        
+        <style>
+       .container { 
+            display: flex; 
+            align-items: center; 
+            justify-content: space-evenly; 
+        } 
+  
+        .circle { 
+            display: inline-block; 
+            line-height: 0px; 
+            border-radius: 50%; 
+            font-size: 65px; 
+            background-color:#50a5de; 
+            color: white; 
+        } 
+  
+        .circle span { 
+            display: inline-block; 
+            padding-top: 50%; 
+            padding-bottom: 50%; 
+            margin-left: 12px; 
+            margin-right: 12px; 
+        }   
+        #SPAN_3:hover{color:#636363;}
+        #SPAN_3{color:#000;}
+        .price-box:hover fade {
+            color: #fff;
+        }
+        **.price-box:hover span {
+            color: #ffffff !important;
+        }**
+        </style>        
+    
+    </head>
+	
+    <body>
+
+		<div class="reveal">
+			<div class="slides">
+          
+                
+                <!----------------------- Section: Main Title page ----------------------->   
+                <section>
+                    
+                    <!------- Title ------->
+                    <section data-transition="fade-in fade-out" data-background="../slides/image/cover.png">
+                        <h2 style="color:#50a5de;text-align:right;">From Dairy Aisle <br> to Payday Loans</h2>
+                        <!--To remove all upper case, use style "text-transform: none;"-->
+                        <h4 style="color:#f27b25;text-align:right;">An In-depth Examination <br>of Consumer Economics <br> in the U.S.</h4>
+                        <p style="color:darkgray;font-size:25px;text-align:right;">Author: Nicole Golden (2024)</p>
+				    </section>                                           
+                
+                    <!------- Roadmap ------->
+                    <section data-transition="fade-in fade-out">
+						<h3 style="color:#f28535">Roadmap</h3>
+                        <ul style="font-size:32px;line-height:1.6em;">
+                            <li>Motivation</li>
+                            <li>Research Question</li>
+                            <li>Background</li>                            
+                            <li>Data</li>
+                            <li>Model</li>
+                            <li>Results</li>
+                            <li>Conclusions & Comments</li>
+                            <li>Q & A</li>
+                        </ul>                        
+                        <!------- Roadmap (speaker  notes) ------->
+                        <aside class="notes">Add speaker notes here.</aside>
+					</section>                                        
+                
+                </section>    
+                
+                
+                <!----------------------- Section: Chapter 1 - Milk Consumption ----------------------->   
+                <section>
+                    
+                    <!------- Title ------->
+                    <section data-transition="fade-in fade-out" data-background="../slides/image/cover1.png">
+                        <h2 style="color:#50a5de;text-align:left;"><span class="circle"><span>1</span></span> Got Milk?</h2>
+                        <!--To remove all upper case, use style "text-transform: none;"-->
+                        <h4 style="color:#f27b25;text-align:left;">Analyzing Milk <br>Consumption Patterns <br>in the Context of <br>U.S. Migration</h4>
+				    </section>                       
+            
+                    <!------- Motivation: Why milk consumption? ------->
+                    <section data-transition="fade-in fade-out">
+                        <h3 style="color:#f27b25;">Motivation: Why Milk Consumption?</h3> 
+                        <ul style="font-size:32px;line-height:1.5em;">                            
+                            <li><span style="font-weight:bold;">Dairy Milk: consistent decline</span>                            
+                                <ul>
+                                    <li style="list-style-type:circle">1970: 0.96 cups daily per capita</li>
+                                    <li style="list-style-type:circle">2019: 0.49 cups (<span style="color:#f27b25;">-50%</span>, or each decade -12.45%)</li>
+                                </ul>
+                            </li>
+                            
+                            <li><span style="font-weight:bold;">Plant Milk: partly contribute to the decline</span>
+                                <ul>
+                                    <li style="list-style-type:circle">Price premium</li>
+                                    <li style="list-style-type:circle">Lactose-free, nutrient substitute, environmentally friendly, animal welfare, COVID-19</li>
+                                </ul>
+                            </li>
+                            
+                        </ul>
+                    
+                        <br><br><p style="color:darkgray;font-size:16px;text-align: left">Source: <a href="https://ageconsearch.umn.edu/record/324713/" target="_blank">Stewart and Kuchler (2022)</a>, <a href="https://journals.hh-publisher.com/index.php/pmmb/article/view/462" target="_blank">Loh, Seah and Looi (2021)</a>, and <a href="https://plantbasedfoods.org/2022-retail-sales-data-plant-based-food" target="_blank">Foods Association (2022)</a>.</p>                        
+                    </section>
+                    
+                    <!------- Research Question ------->
+                    <section data-transition="fade-in fade-out">
+                        <h3 style="color:#f27b25">Research Question</h3>
+                        <ul style="font-size:32px;line-height:1.5em;">
+                            <li><span style="font-weight:bold;">How does migration to another state affect dairy & plant milk consumption?</span></li>
+                            <ul>
+                                <li style="list-style-type:circle">Expenditure patterns</li>
+                                <li style="list-style-type:circle">New local environment</li>
+                            </ul>
+                            <li><span style="font-weight:bold;">Contribution:</span></li>                                               
+                                <ul>
+                                    <li style="list-style-type:circle">Research gaps &rarr; quantify</li>
+                                    <li style="list-style-type:circle">Dietary policies: WIC</li>
+                                </ul>
+                        </ul>
+                    </section>                              
+                
+                    <!------- Background: Dairy vs Plant Milk ------->
+                    <section data-transition="fade-in fade-out">
+                        <h3 style="color:#f27b25">Background: Dairy vs Plant Milk</h3>
+                        <img src="../slides/image/dairy_plant.png" alt="dairy_plant" class="center" width="1000">
+                        <p style="color:darkgray;font-size:16px;text-align: left">Source: <a href="https://plantbasedfoods.org/latest/2019-data-plant-based-market" target="_blank">Plant Based Foods Association (2020)</a>, <a href="https://www.sciencedirect.com/science/article/pii/S0023643819305997" target="_blank">Gerliani, Hammami and Aider (2019)</a>, and <a href="https://www.tandfonline.com/doi/full/10.1080/10454446.2020.1857318" target="_blank">Boaitey and Minegishi (2020)</a>. Image source: author.</p>
+                    </section>                      
+
+                    <!------- Data: Nielsen Consumer Panel ------->
+                    <section data-transition="fade-in fade-out">
+                        <h3 style="color:#f27b25">Data: Nielsen Consumer Panel</h3>
+                        <ul style="font-size:30px;line-height:1.5em;">
+                                <li><span style="font-weight:bold;">Coverage</span>: weekly milk purchases from 200k HHs in 49 states </li>
+                                <li><span style="font-weight:bold;">Period</span>: 2004 ~ 2019</li>
+                            
+                                <li><span style="font-weight:bold;">Dairy Milk</span>: whole, 2%, 1.5%, 1%, 0.5%, skim, lactose-free, goat, other</li>
+                                <li><span style="font-weight:bold;">Plant Milk</span>: almond, soy, rice, oat, flax, cashew, other</li>
+                            
+                                <li><span style="font-weight:bold;">Outcome</span>: log quarterly milk expenditures per person</li>                          
+                                <li><span style="font-weight:bold;">HH Chars.</span>: age, educ, income, marriage, employment, children, race</li>
+                                <li><span style="font-weight:bold;">Treatment</span>: whether moved to another state</li>                               
+                                <li><span style="font-weight:bold;">Final Data</span>: aggregated at quarterly level for each HH (in 2019 $)</li>     
+                                <ul><li style="list-style-type:circle">5k movers & 185k non-movers</li></ul>                            
+                        </ul>
+                        
+                        <br><br><p style="color:darkgray;font-size:16px;text-align: left">Source: <a href="https://nielseniq.com/global/en/solutions/homescan/" target="_blank">Nielsen Homescan Consumer Panel</a>. Note: The data excludes states of Alaska & Hawaii. The movers are those who moved only once.</p>                    
+                    </section>                        
+                
+                    <!------- Pre-Check: Comparing (Non)Movers ------->
+                    <section data-transition="fade-in fade-out">
+                        <h3 style="color:#f27b25">Pre-Check: Comparing (Non)Movers</h3>                    
+                        <ul style="font-size:32px;line-height:1.5em;">
+                            <li><span style="font-weight:bold;">Movers & non-movers are comparable:</span></li>
+                            <ul>
+                                <li style="list-style-type:circle"><span style="font-weight:bold;">Movers</span>: more white/older, higher income/educ (same marriage rate)</li>
+                                <li style="list-style-type:circle"><span style="font-weight:bold;">Non-movers</span>: larger HH size, slightly higher employment rate, more young children</li>
+                            </ul>
+                            <li><span style="font-weight:bold;">HHs move at random:</span></li>
+                            <ul>
+                                <li style="list-style-type:circle"><span style="font-weight:bold;">Logit Model</span>: test if HHs move at random</li>
+                                <li style="list-style-type:circle">Results show HHs <span style="font-weight:bold;">do move randomly</span></li>
+                            </ul>
+                        </ul>
+                    
+                        <br><br><p style="color:darkgray;font-size:16px;text-align: left">Note: There are 4,777 movers and 185,230 non-movers. The parallel trend is not very informative since the treatment is staggered, hence it's omitted here.</p>                    
+                    </section>
+                               
+                    <!------- Pre-Check: Event Study 1 ------->
+                    <section data-transition="fade-in fade-out">
+                        <h3 style="color:#f27b25">Pre-Check: Event Study 1 <br>Consumption Patterns</h3>  
+                            <img src="../slides/image/event1.png" alt="event1" class="left" width="1000">                       
+                        <br><p style="color:darkgray;font-size:16px;text-align: left">Note: Following <a href="https://link.springer.com/article/10.1007/s10640-018-0301-5" target="_blank">Harding and Rapson (2019)</a>, the event study 1 model is \( ln(y)_{it} = \alpha_{i} + \tau_{t} + \sum\limits_{r = \underline{m}, r \neq -1}^{\overline{m}} \beta_{r} \cdot I_{it}+ X^\prime_{it}\Gamma + \epsilon_{it} \), where \( |\underline{m}| = \overline{m} = 8 \), and \( I_{it} \) is an indicator variable set equal to one if household \( i \) in quarter \( t \) is \( r \) months after it has moved to another state.</p>
+                    </section>
+
+               <!------- DID Model 1 ------->
+                    <section  data-transition="fade-in fade-out">
+                        <h3 style="color:#f27b25" >DID Model 1: Consumption Patterns</h3>                         
+                            <ul style="font-size:32px;line-height:1.5em;">
+                            \[
+                                 ln(y)_{it} = \alpha_{i} + \tau_{t} + \beta D_{it} + X_{it}^\prime\Gamma + \epsilon_{it}
+                            \]                                
+                                <li> \( ln(y)_{it} \) = Log quarterly milk expenditures per person</li>                                  
+                                <li> \( \alpha_{i} \), \( \tau_{t} \) = HH & quarter FE</li>
+                                <li> \( \beta \) = Treatment effect</li>
+                                <li> \( D_{it} \) = Treatment</li>                              
+                                <li> \( X_{it} \) = HH chars.</li>
+                                <li> \( \Gamma \) = Coefficients for \( X_{it}\)</li>
+                            </ul>
+                        <br><br><p style="color:darkgray;font-size:16px;text-align: left">Source: <a href="https://link.springer.com/article/10.1007/s10640-018-0301-5" target="_blank">Harding and Rapson (2019)</a>.</p>
+                    </section>
+                        
+                    
+                    <!------- DID Model 1: Main Results------->                    
+                    <section  data-transition="fade-in fade-out">  
+                        <h3 style="color:#f27b25">DID Model 1: Main Results</h3>
+                        <table style="font-size:28px;">
+						<thead>
+							<tr>
+                                <!-- Column 1 -->
+                                <th> </th>
+                                <!-- Column 2 -->
+								<th style="text-align:center">Dairy Milk</th>
+                                <!-- Column 3 -->
+								<th style="text-align:center">Plant Milk</th>
+							</tr>
+						</thead>
+						
+                        <tbody>
+							<tr>                                
+                                <!-- row 1 -->                                       
+                                <td><span style="font-weight:bold;">Post Move</span></td>
+                                <td style="text-align:center" ><span class="fragment highlight-blue">0.012**</span> <br> (0.006)</td>
+                                <td style="text-align:center"><span class="fragment highlight-red">-0.015*</span> <br> (0.008)</td>
+                            </tr>
+							
+                            <tr>
+                                <!-- row 2 -->                                                                
+                                <td>Obs.</td>
+								<td style="text-align:center">3,323,626</td>
+								<td style="text-align:center">434,264</td>                                
+                            </tr>        
+                            <tr>
+                            </tr>                            
+                        </tbody>					
+                        </table>                     
+                            
+                        <br><br><p style="color:darkgray;font-size:16px;text-align: left">Note: The characteristics include age, educ, income, marital status, employment, children, and race. The SEs are clustered at HH level.<br>*** Significant at 1 percent level.** Significant at 5 percent level.* Significant at 10 percent level.</p>  
+                    </section>                    
+
+               
+                    <!------- DiD Model: Placebo test ------->
+                    <section data-transition="fade-in fade-out">
+                        <h3 style="color:#f27b25">DID Model 1: Placebo Test</h3>  
+                        <ul style="font-size:32px;line-height:1.5em;">   
+                            <li><span style="font-weight:bold;">Placebo Test</span>: unobservables do not affect results</li>
+                            <ul>
+                                <li style="list-style-type:circle">Use pre-treatment data only</li>    
+                                <li style="list-style-type:circle">Randomly assign fake treatment period 
+                                    <br> &rarr; 2 quarters prior to real treatment</li>
+                                <li style="list-style-type:circle">Re-run DID Model 1</li>
+                            </ul>
+                        </ul>
+                        <br><br><p style="color:darkgray;font-size:16px;text-align: left">Source: <a href="https://link.springer.com/article/10.1007/s10640-018-0301-5" target="_blank">Harding and Rapson (2019)</a>.</p> 
+                    </section>     
+
+                    <!------- DID Model 1: Placebo Test Results------->                    
+                    <section  data-transition="fade-in fade-out">  
+                        <h3 style="color:#f27b25">DID Model 1: Placebo Test Results</h3>
+                        <table style="font-size:28px;">
+						<thead>
+							<tr>
+                                <!-- Column 1 -->
+                                <th> </th>
+                                <!-- Column 2 -->
+								<th style="text-align:center">Dairy Milk</th>
+                                <!-- Column 3 -->
+								<th style="text-align:center">Plant Milk</th>
+							</tr>
+						</thead>
+						
+                        <tbody>
+							<tr>                                
+                                <!-- row 1 -->                                       
+                                <td><span style="font-weight:bold;">Post Move</span></td>
+                                <td style="text-align:center" ><span class="fragment semi-fade-out">0.004</span> <br> (0.006)</td>
+                                <td style="text-align:center"><span class="fragment semi-fade-out">-0.012</span> <br> (0.013)</td>
+                            </tr>
+							
+                            <tr>
+                                <!-- row 2 -->                                                                
+                                <td>Obs.</td>
+								<td style="text-align:center">3,263,218</td>
+								<td style="text-align:center">424,055</td>                                
+                            </tr>        
+                            <tr></tr>                            
+                        </tbody>					
+                        </table>                                                     
+                        <br><br><br><p style="color:darkgray;font-size:16px;text-align: left">Note: The characteristics include age, educ, income, marital status, employment, children, and race. The SEs are clustered at HH level.</p>              
+                    </section>  
+
+               
+                    <!------- Pre-Check: Event Study 2 ------->
+                    <section data-transition="fade-in fade-out">
+                        <h3 style="color:#f27b25">Pre-Check: Event Study 2 <br>Local Environment</h3>  
+                            <img src="../slides/image/event2.png" alt="dairy_event2" class="left" width="1000"> 
+                                 
+                        <p style="color:darkgray;font-size:16px;text-align: left">Note: Following <a href="https://academic.oup.com/qje/article-abstract/131/4/1681/2468872" target="_blank"> Finkelstein, Gentzkow and Williams (2016)</a>, the event study 2 model is \( ln(y)_{it} = \alpha_{i} + \tau_{t} + \sum\limits_{r=\underline{m}}^{\overline{m}} \theta_{r} \cdot I_{r} \cdot \Delta_{i} + X^\prime_{it}\Gamma + \epsilon_{it} \), where \( \theta_{r} \) are coefficients, and \(\Delta_{i} = \bar{y}_{N,i} - \bar{y}_{O,i} \) is the size of the move.</p>
+                    </section>                    
+               
+                    <!------- DID Model 2 ------->
+                    <section data-transition="fade-in fade-out">
+                        <h3 style="color:#f27b25">DID Model 2: Local Environment</h3>  
+                        <ul style="font-size:32px;line-height:1.5em;">  
+                            \[
+                            ln(y)_{it} = \alpha_{i} + \tau_{t} + \sum\limits_{r=\underline{m}}^{\overline{m}} \theta_{r} \cdot D_{it} \cdot \Delta_{i} + X^\prime_{it}\Gamma + \epsilon_{it}  
+                            \]
+                            <li>\( \theta_{r} \) = Coefficients for \( D_{it} \cdot \Delta_{i} \) </li>
+                            <li>\( D_{it} \) = 1 if HH \( i \) moved to another state in quarter \( t \), 0 otherwise </li>
+                            <li>\( \Delta_{i} = \bar{y}_{N,i} - \bar{y}_{O,i} \), or size of the move</li>
+                        </ul>
+                        <br><br><p style="color:darkgray;font-size:16px;text-align: left">Source: <a href="https://academic.oup.com/qje/article-abstract/131/4/1681/2468872" target="_blank"> Finkelstein, Gentzkow and Williams (2016)</a>.</p>
+                        
+                    </section>                  
+                    
+                    <!------- DID Model 2: Main Results------->                    
+                    <section  data-transition="fade-in fade-out">  
+                        <h3 style="color:#f27b25">DID Model 2: Main Results</h3>
+                        <table style="font-size:28px;">
+						<thead>
+							<tr>
+                                <!-- Column 1 -->
+                                <th> </th>
+                                <!-- Column 2 -->
+								<th style="text-align:center">Dairy Milk</th>
+                                <!-- Column 3 -->
+								<th style="text-align:center">Plant Milk</th>
+							</tr>
+						</thead>
+						
+                        <tbody>
+							<tr>                                
+                                <!-- row 1 -->                                       
+                                <td>\( \Delta \cdot \)<span style="font-weight:bold;">Post Move</span></td>
+                                <td style="text-align:center" ><span class="fragment highlight-blue">0.534*</span> <br> (0.169)</td>
+                                <td style="text-align:center"><span class="fragment highlight-blue">0.173**</span> <br> (0.076)</td>
+                            </tr>
+							
+                            <tr>
+                                <!-- row 2 -->                                                                
+                                <td>Obs.</td>
+								<td style="text-align:center">148,786</td>
+								<td style="text-align:center">22,484</td>                                
+                            </tr>        
+                            <tr>
+                            </tr>                            
+                        </tbody>					
+                        </table>                     
+                            
+                        <br><br><p style="color:darkgray;font-size:16px;text-align: left">Note: The characteristics include age, educ, income, marital status, employment, children, and race. \( \Delta_{i} \) is the difference in the average logarithm of milk expenditures between the new state and the original state. The SEs are clustered at HH level.<br>*** Significant at 1 percent level.** Significant at 5 percent level.* Significant at 10 percent level.</p>  
+                    </section>                         
+
+
+                    
+                     <!------- Conclusions & Comments (static)------->                    
+                    <section data-transition="fade-in fade-out">
+						<h3 style="color:#f27b25;line-height:1.6em;">Conclusions & Comments</h3>     
+                         <ul style="font-size:32px;line-height:1.5em;">
+                             <li><span style="font-weight:bold;">Conclusions:</span></li>
+                             <ul>
+                                 <li style="list-style-type:circle">How migration affect dairy & plant milk consumption?</li>
+                                 <li style="list-style-type:circle"><span style="font-weight:bold;">Finding 1:</span> HH <span style="color:#50a5de;">&uarr; dairy milk </span> expenditure by <span style="color:#50a5de;">1.2%</span> post move
+                                     <br>&emsp; &emsp; &emsp; &nbsp;&nbsp;&nbsp;&nbsp;
+                                     HH <span style="color:#f27b25;">&darr; plant milk </span> expenditure by <span style="color:#f27b25;">1.5%</span> post move</li>
+                                 <li style="list-style-type:circle"><span style="font-weight:bold;">Finding 2:</span>New destination explains <span style="color:#50a5de;">53%</span> diff in <span style="color:#50a5de;">dairy milk </span>
+                                     <br>&emsp; &emsp; &emsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                                     New destination explains <span style="color:#f27b25;">17%</span> diff in <span style="color:#f27b25;">plant milk</span></li>       
+                             </ul>
+                             <li ><span style="font-weight:bold;">Limitations:</span></li>
+                             <ul >
+                                 <li style="list-style-type:circle" >Data covers some major mkts</li>
+                                 <li style="list-style-type:circle" >Plant milk not broadly available</li>                                 
+                                 <li style="list-style-type:circle" >Plant milk results may not be representative</li>                     
+                             </ul>
+                        </ul>
+                    </section>                    
+                    
+                    
+                    
+                </section>
+                <!----------------------- Section: Chapter 2 - Payday Loan (ATE) ----------------------->   
+                <section>
+                    
+                    <!------- Title ------->
+                    <section data-transition="fade-in fade-out" data-background="../slides/image/cover2.png" >
+                        <h2 style="color:#50a5de;text-align:right;"><span class="circle"><span>2</span></span> Got Money?</h2>
+                        <!--To remove all upper case, use style "text-transform: none;"-->
+                        <h4 style="color:#f27b25;text-align:right;">Investigating the Impact of <br>Payday Loan <br> Extended Payment Plans <br>on Financial Well-being</h4>
+				    </section>   
+                    
+                    
+                    <!------- Motivation: Why financial health? ------->
+                    <section data-transition="fade-in fade-out" id="golden2023">
+						<h3 style="color:#f27b25">Motivation: Why Financial Health?</h3>
+                        <ul style="font-size:32px;line-height:1.5em;">                              
+                            <li><a href="#/3/4"><span id="SPAN_3"><fade> <span style="font-weight:bold;">67%</span> Americans not financially healthy</fade></span></a></li>
+                            <li>2020 USC survey data of 6,430 respondents</li>
+                        </ul>                                
+                        <img src="../slides/image/finscore.png" alt="finscore" class="center" width="950">
+                        
+                    <br><p style="color:darkgray;font-size:16px;text-align: left">Source: <a href="https://cfsi-innovation-files-2018.s3.amazonaws.com/wp-content/uploads/2020/10/26135655/2020PulseTrendsReport-Final-1016201.pdf" target="_blank">Financial Health Network (2020)</a>, <a href="https://www.brookings.edu/articles/measuring-the-financial-health-of-americans/" target="_blank">Brookings (2021)</a>, and <a href="https://uasdata.usc.edu/index.php" target="_blank">USC (2020)</a>. The figures and statistics are redacted.</p>                    
+					</section>
+                    
+                    <!------- Motivation: Payday Loans ------->
+                    <section data-transition="fade-in fade-out">
+						<h3 style="color:#f27b25">Motivation: Payday loans</h3>
+                        <ul style="font-size:32px;line-height:1.6em;">
+                            <li><span style="font-weight:bold;">Non-prime Credit</span>: 12 million payday loan users</li>
+                            <li><span style="font-weight:bold;">Payday Loan</span>:
+                                <ul>
+                                    <li style="list-style-type:circle">Small-dollar, short-term, unsecured</li>
+                                    <li style="list-style-type:circle">High APRs: 300% ~ 500%</li>
+                                    <li style="list-style-type:circle">22 states (effectively) banned</li> 
+                                </ul>
+                            <li>15 states passed <span style="font-weight:bold;">extended payment plans</span> to protect payday loan borrowers</li>
+                        </ul>
+                    <br><br><p style="color:darkgray;font-size:16px;text-align: left">Source: <a href="https://files.consumerfinance.gov/f/documents/cfpb_consumer-use-of-payday-auto_title-pawn_loans_research-brief_2021-05.pdf" target="_blank">CFPB (2021)</a>.</p>                          
+					</section>  
+
+                    <!------- Research Question  ------->
+                    <section data-transition="fade-in fade-out">
+						<h3 style="color:#f27b25">Research Question</h3>
+                        <ul style="font-size:32px;line-height:1.6em;">
+                            <li><span style="font-weight:bold;">Do extended payment plans improve financial health?</span></li>
+                            <li><span style="font-weight:bold;">Wang and Burke (2022)</span>: 
+                                <ul>
+                                    <li style="list-style-type:circle">Texas, Austin, Dallas require disclosing cost of payday loans vs other credit products</li>
+                                    <li style="list-style-type:circle">Led to significant <span style="color:#f27b25;">decline</span> in payday loan volume</li>
+                                </ul>
+                            </li>
+                            <li><span style="font-weight:bold;">Contribution</span>: a broader payday loan policy applied to more states</li>      
+                    </ul>
+					</section>                      
+
+                    <!------- Background: payday loans ------->
+                    <section data-transition="fade-in fade-out" id="payday">
+						<h3 style="color:#f27b25">Background: Payday Loans</h3>
+                        <ul style="font-size:32px;line-height:1.6em;">
+                            <li><a href="#/3/5"><span id="SPAN_3"><fade> Small-dollar, <span style="font-weight:bold;">legal</span> in 29 states (2020)</fade></span></a></li>
+                            <li><span style="font-weight:bold;">Loan Limit</span> $500, unsecured, repay in next payday</li>
+                            <li><span style="font-weight:bold;">High APRs</span>: 300% ~ 500% (credit cards: 12% ~ 30%)</li>
+                            <li><span style="font-weight:bold;">Features</span>: "cash, quick, fast, easy, emergency bills"</li>
+                            <li><span style="font-weight:bold;">Rollover</span>: charges will double!</li>
+                            <li>"Debt Traps"</li>
+                        </ul>
+                    <br><br><p style="color:darkgray;font-size:16px;text-align: left">Source: <a href="https://files.consumerfinance.gov/f/documents/cfpb_consumer-use-of-payday-auto_title-pawn_loans_research-brief_2021-05.pdf" target="_blank">CFPB (2021)</a>.</p>                          
+                        
+					</section>   
+                    
+                    <!------- Background: extended payment plans ------->
+                    <section data-transition="fade-in fade-out" id="extended">
+						<h3 style="color:#f27b25">Background: <br> Extended Payment Plans</h3>
+                        <ul style="font-size:32px;line-height:1.6em;">
+                            <li><span style="font-weight:bold;"><a href="#/3/5"><span id="SPAN_3"><fade>Key features:</fade></span></a></span></li> 
+                            <ul>
+                                <li style="list-style-type:circle">Repay in 3 ~ 4 <span style="font-weight:bold;">installments</span> (salient) with <span style="font-weight:bold;">zero charges</span></li> 
+                                <li style="list-style-type:circle"><span style="font-weight:bold;">Minimum repayment term</span> 60 ~ 90 days</li>
+                                <li style="list-style-type:circle"><span style="font-weight:bold;">Limit</span> use to once a year</li>
+                                <li style="list-style-type:circle"><span style="font-weight:bold;">Eligible</span> only if reach a threshold of rollovers
+                                <li style="list-style-type:circle">Require lenders to <span style="font-weight:bold;">disclose</span> availability of the plans</li>
+                            </ul> 
+                        </ul>
+                        <p style="color:darkgray;font-size:16px;text-align: left">Source: <a href="https://files.consumerfinance.gov/f/documents/cfpb_market-snapshot-payday-loan-extended-payment-plan_report_2022-04.pdf" target="_blank">CFPB (2022)</a>.</p>                            
+					</section>   
+
+                    <!------- Data: Clarity Payday Loan ------->
+                    <section data-transition="fade-in fade-out" id="clarity">
+						<h3 style="color:#f27b25">Data: Clarity Payday Loan</h3>
+                        <ul style="font-size:32px;line-height:1.6em;">                                    
+                            <li><a href="#/3/6"><span id="SPAN_3"><fade><span style="font-weight:bold;">Coverage</span>: 60 million or 70% of non-prime consumers</fade></span></a></li>
+                            <li><span style="font-weight:bold;">Period</span>: 2015 ~ 2020</li>
+                            <li><span style="font-weight:bold;">Borrower Chars.</span>: age, net monthly income, pay frequency, housing status, months at address</li>                                    
+                            <li><span style="font-weight:bold;">Financial Health</span>: amount past due, original charge-off, delinquency rate, charge-off or debt-in-collections rate</li>
+                            <li><span style="font-weight:bold;">Final Data</span>: aggregated at quarterly level for each state (in 2020 $)</li>                                    
+                            <ul>
+                                <li style="list-style-type:circle">14 control and 5 treated states</li>                           
+                            </ul>
+                        </ul>
+                        <p style="color:darkgray;font-size:16px;text-align: left">Source: <a href="https://www.clarityservices.com" target="_blank">Clarity</a>.</p>
+					</section>                      
+
+
+                    <!------- Data: Extended Payment Plans Legal Status ------->
+                    <section data-transition="fade-in fade-out" id="dates">
+						<h3 style="color:#f27b25">Data: Extended Payment Plans <br> Legal Status</h3>
+                    <table style="font-size:28px;">
+						<thead>
+							<tr>
+                                <!-- Column 1 -->
+                                <th style="text-align:center;font-weight:normal;"><a href="#/3/6"><span id="SPAN_3"><fade>State Treated</fade></span></a></th>
+                                <!-- Column 2 -->
+								<th style="text-align:center;font-weight:normal;"><a href="#/3/6"><span id="SPAN_3"><fade>Date Treated</fade></span></a></th>
+                                <!-- Column 3 -->
+								<th style="text-align:center;font-weight:normal;"><a href="#/3/6"><span id="SPAN_3"><fade>Quarter Treated</fade></span></a></th>
+                                <!-- Column 4 -->
+								<th style="text-align:center;font-weight:normal;"><a href="#/3/6"><span id="SPAN_3"><fade>Total Treated Quarters</fade></span></a></th>                                
+							</tr>
+						</thead>
+						
+                        <tbody>
+							<tr>
+                                <!-- row 1 -->                                                                
+                                <td><span style="font-weight:bold;">Deleware</span></td>
+                                <td style="text-align:center">2018-12-12</td>
+                                <td style="text-align:center;font-weight:bold;">17</td>
+                                <td style="text-align:center">8</td>
+                            </tr>
+							
+                            <tr>
+                                <!-- row 2 -->                                                                
+                                <td><span style="font-weight:bold;">Florida</span></td>
+                                <td style="text-align:center">2019-07-01</td>
+                                <td style="text-align:center;font-weight:bold;">20</td>
+                                <td style="text-align:center">5</td>                                
+                            </tr>
+							
+                            <tr>
+                                <!-- row 3 -->                                                                
+                                <td><span style="font-weight:bold;">Louisiana</span></td>
+								<td style="text-align:center">2015-01-01</td>
+                                <td style="text-align:center;font-weight:bold;">3</td>
+                                <td style="text-align:center">22</td>
+                            </tr>                            
+
+                            <tr>
+                                <!-- row 4 -->                                                                
+                                <td><span style="font-weight:bold;">Nevada</span></td>
+								<td style="text-align:center">2017-07-01</td>
+                                <td style="text-align:center;font-weight:bold;">12</td>
+                                <td style="text-align:center">13</td>
+                            </tr> 
+                            
+                            <tr>
+                                <!-- row 5 -->                                                                
+                                <td><span style="font-weight:bold;">Utah</span></td>
+								<td style="text-align:center">2016-07-01</td>
+								<td style="text-align:center;font-weight:bold;">8</td>
+								<td style="text-align:center">17</td>                                
+                            </tr>   
+                            <tr>
+                            </tr>
+                        </tbody>
+					</table>
+                        <br><br><p style="color:darkgray;font-size:16px;text-align: left">Data source: Refer to each state's deferred deposit transaction law.</p>                        
+                    </section>                                               
+                    
+                    <!------- Pre-check: Treat vs Control ------->
+                    <section data-transition="fade-in fade-out">
+						<h3 style="color:#f27b25">Pre-check: Borrowers Comparable</h3>
+                        <ul style="font-size:32px;line-height:1.6em;">
+                            <li><span style="font-weight:bold;">Financial Health:</span></li>
+                            <ul>
+                                <li style="list-style-type:circle"><span style="font-weight:bold;">Treated:</span> a bit higher amount past due, original charge-off</li>
+                                <li style="list-style-type:circle"><span style="font-weight:bold;">Control:</span> a bit higher delinquency rate, charge-off or debt-in-collection rate</li>
+                            </ul>
+                            <li><span style="font-weight:bold;">Borrowers Chars.:</span></li>
+                            <ul>
+                                <li style="list-style-type:circle"><span style="font-weight:bold;">Treated:</span> more likely to rent/live with friends, reside longer at current place, paid weekly</li>
+                                <li style="list-style-type:circle"><span style="font-weight:bold;">Control:</span> a bit younger & lower income</li>
+                            </ul>                            
+                        </ul>
+                    </section>
+                    
+                    <!------- Pre-check: Event Study ------->
+                    <section data-transition="fade-in fade-out">
+						<h3 style="color:#f27b25">Pre-check: Event Study</h3>
+                            <img src="../slides/image/payday_event.png" alt="payday_event" class="left" width="760">  
+                        <p style="color:darkgray;font-size:16px;text-align: left">Note: Following <a href="https://www.sciencedirect.com/science/article/pii/S030440762030378X" target="_blank">Sun and Abraham (2021)</a>, the model is \(  y_{it} = \alpha_{i} + \beta_{t} + \sum\limits_{g}\sum\limits_{r \neq -1} \mu_{g,r} \left(\textbf{1}{(G_{i}= g)} \times event\_time_{it}^{r}\right) + \epsilon_{it} \).</p>                        
+                    </section>
+                    
+                    <!------- Model: SDiD ------->
+                    <section data-transition="fade-in fade-out">
+						<h3 style="color:#f27b25">Model: SDiD</h3>
+                        <ul style="font-size:32px;line-height:1.6em;">
+                            <span style="font-size:30px;">
+                            \[
+                            \hat{\tau}^{SDID} = argmin_{\mu, \alpha, \beta, \tau} \Bigl\{\sum_{i = 1}^{N} \sum_{t = 1}^{T} (Y_{it} - \mu - \alpha_{i} - \beta_{t} - \tau D_{it})^{2} \hat{w}_{i} \hat{\lambda}_{t} \Bigl\}
+                            \]
+                            </span>    
+                            <li>\( Y_{it} \) = financial health in state \(i \), quarter \(t \)</li>
+                            <li>\( \mu \) = intercept</li>
+                            <li>\( \alpha_{i} \), \( \beta_{t} \) = state, quarter fixed effects</li>
+                            <li>\( \tau \) = ATT</li>                            
+                            <li>\( D_{it} \) = 1 if passed extended payment plans, 0 otherwise</li>
+                            <li>\( \hat{w}_{i} \), \( \hat{\lambda}_{t} \) = unit, time weights</li>
+                        </ul>
+                        
+                        <br><p style="color:darkgray;font-size:16px;text-align: left">Source: <a href="https://www.aeaweb.org/articles?id=10.1257/aer.20190159" target="_blank">Arkhangelsky et al. (2021)</a>.</p>
+                    </section>  
+                    
+                    <!------- Model: SDiD: Weights ------->
+                    <section data-transition="fade-in fade-out">
+						<h3 style="color:#f27b25">SDiD: Weights</h3>
+                        <ul style="font-size:32px;line-height:1.6em;">
+                            <span style="font-size:30px;">
+                        \[ Unit: \hat{w}_{i} = argmin\| \bar{y}_{pre, tr} - (w_{0} + Y_{pre, co}w_{co})\|_{2}^{2} + \zeta T_{pre}\|w_{co}\|^2_{2} \]
+                            </span>
+                            <li>Match pre-treatment trends between control & treated units</li>
+                            <li><span style="font-weight: bold;">Parallel trend</span> &rarr; exploits advantages of DiD & SC</li>
+                            <span style="font-size:30px;">
+                            \[ Time: \hat{\lambda}_{t} = argmin\| \bar{y}_{post, co} - (\lambda_{0} + \lambda_{pre}Y_{pre, co} + \lambda_{0})\|_{2}^{2} \]
+                            </span>
+                            <li>Balance pre- & post-treatment periods for control units</li>
+                            <li><span style="font-weight: bold;">Increase precision</span> of treatment effect estimates</li>                            
+                        </ul>
+                        <br><br><p style="color:darkgray;font-size:16px;text-align: left">Notes: Unit weights in a simpler term: \( \sum_{i=1}^{N_{co}}  \hat{w}_{i}Y_{it} \approx N_{tr}^{-1}\sum_{i=N_{co}+1}^{N}Y_{it} \) for all \( t = 1, 2, ..., T_{pre} \). Time weights in simpler term, \( \sum_{t=1}^{T_{pre}}\lambda_{t}Y_{it}\approx T_{post}^{-1}\sum_{T_{pre}+1}Y_{it} \) for all \( i=1, 2, ..., N_{co} \).</p>                        
+					</section>  
+                
+                    <!------- Model: SDiD: staggered Adoption ------->
+                    <section data-transition="fade-in fade-out">
+						<h3 style="color:#f27b25">SDiD: Staggered Adoption</h3>
+                        <ul style="font-size:32px;line-height:1.6em;">
+                            <span style="font-size:30px;">
+                                \[ \frac{8}{65}ATT_{DE} + \frac{5}{65}ATT_{FL} + \frac{22}{65}ATT_{LA} + \frac{13}{65}ATT_{NV} + \frac{17}{65}ATT_{UT} \]
+                            </span>
+                            <li>Run synthetic DiD for each treated state</li>
+                            <li>Get 5 ATTs</li>
+                            <li><span style="font-weight: bold;">Re-weight ATT:</span> by ratio of a state's treated vs total treated periods</li>
+                        </ul>
+                        <br><br><br><p style="color:darkgray;font-size:16px;text-align: left">Source: <a href="https://arxiv.org/abs/2301.11859" target="_blank">Clarke et al. (2023)</a>.</p>                        
+					</section>                          
+
+                    <!------- SDID: Plots ------->                    
+                    <section data-transition="fade-in fade-out">
+                        <h3 style="color:#f27b25">SDID: Amount Past Due</h3>
+                        <img src="../slides/image/SDID.png" alt="SDID" class="center" width="1200">
+                        <br><p style="color:darkgray;font-size:16px;text-align: left">Notes: The red line represents the treated state, and the gray line is the synthetic control state.</p>                    
+                    </section>    
+                    
+                    <!------- SDID: Main Results ------->
+					<section data-transition="fade-in fade-out">
+                        <h3 style="color:#f27b25">SDID: Main results</h3>
+                    <table style="font-size:28px;">
+						<thead>
+							<tr>
+                                <!-- Column 1 -->
+                                <th> </th>
+                                <!-- Column 2 -->
+								<th style="text-align:center">DID</th>
+                                <!-- Column 3 -->
+								<th style="text-align:center">SDID</th>
+							</tr>
+						</thead>
+						
+                        <tbody>
+							<tr>
+                                <!-- row 1 -->                                                                
+                                <td><span style="font-weight:bold;">Amount Past Due</span></td>
+                                <td style="text-align:center">−30.5277** <br> (14.1838)</td>
+                                <td style="text-align:center"><span style="color:#50a5de;">−25.3166*</span> <br> (13.8418)</td>
+                            </tr>
+							
+                            <tr>
+                                <!-- row 2 -->                                                                
+                                <td><span style="font-weight:bold;">Original Charge-Off</span></td>
+                                <td style="text-align:center">−52.8416*** <br> (17.1973)</td>
+                                <td style="text-align:center"><span style="color:#50a5de;">−49.4988**</span> <br> (19.9673)</td>
+                            </tr>
+							
+                            <tr>
+                                <!-- row 3 -->                                                                
+                                <td><span style="font-weight:bold;">Delinquency Rate</span></td>
+								<td style="text-align:center">−0.0308* <br> (0.0180)</td>
+                                <td style="text-align:center"><span style="color:#50a5de;">−0.0289**</span> <br> (0.0136)</td>
+                            </tr>                            
+
+                            <tr>
+                                <!-- row 4 -->                                                                
+                                <td><span style="font-weight:bold;">Charge-Off or Debt-in-Collections Rate</span></td>
+								<td style="text-align:center">−0.0351* <br> (0.0212)</td>
+                                <td style="text-align:center"><span style="color:#50a5de;">−0.0265**</span> <br> (0.0135)</td>
+                            </tr> 
+                            
+                            <tr>
+                                <!-- row 5 -->                                                                
+                                <td>Obs.</td>
+								<td style="text-align:center">456</td>
+								<td style="text-align:center">456</td>
+                            </tr>      
+                            <tr>
+                            </tr>
+                        </tbody>
+					</table>
+                        
+                        <br><p style="color:darkgray;font-size:16px;text-align: left">Note: The characteristics include age, income, months, housing status, and pay frequency. The model also includes HH & quarter FE. The SEs for the SDiD model are obtained by bootstrap with 1,000 iterations. *** means 99% significance level, ** means 95% significance level, and * means 90% significance level.</p>
+					</section>                                   
+                            
+                    <!------- SDID: Robustness Check ------->
+					<section data-transition="fade-in fade-out">
+                        <h3 style="color:#f27b25;">SDID: Robustness Check</h3>
+                    <table style="font-size:28px;">
+						<thead>
+							<tr>
+                                <!-- Column 1 -->
+                                <th> </th>
+                                <!-- Column 2 -->
+								<th style="text-align:center">SDID</th>
+
+							</tr>
+						</thead>
+						
+                        <tbody>
+							<tr>
+                                <!-- row 1 -->                                                                
+                                <td><span style="font-weight:bold;">Amount Past Due</span></td>
+                                <td style="text-align:center;"><span style="color:darkgray;">0.3218</span> <br> (0.4370)</td>
+                            </tr>
+							
+                            <tr>
+                                <!-- row 2 -->                                                                
+                                <td><span style="font-weight:bold;">Original Charge-Off</span></td>
+                                <td style="text-align:center"><span style="color:darkgray;">−2.2471</span> <br> (2.8075)</td>
+                            </tr>
+							
+                            <tr>
+                                <!-- row 3 -->                                                                
+                                <td><span style="font-weight:bold;">Delinquency Rate</span></td>
+                                <td style="text-align:center"><span style="color:darkgray;">−0.0061</span> <br> (0.0150)</td>
+                            </tr>                            
+
+                            <tr>
+                                <!-- row 4 -->                                                                
+                                <td><span style="font-weight:bold;">Charge-Off or Debt-in-Collections Rate</span></td>
+                                <td style="text-align:center"><span style="color:darkgray;">−0.0010</span> <br> (0.0010)</td>
+                            </tr> 
+                            
+                            <tr>
+                                <!-- row 5 -->                                                                
+                                <td>Obs.</td>
+								<td style="text-align:center">408</td>
+                            </tr> 
+                            <tr>
+                            </tr>                            
+                        </tbody>
+					</table>
+                        
+                        <br><p style="color:darkgray;font-size:16px;text-align: left">Note: The characteristics include age, income, months, housing status, and pay frequency. The model also includes HH & quarter FE. The SEs for the SDiD model are obtained by bootstrap with 1,000 iterations. The fake (randomly sampled) states are OK, TX, MO, KY, and NE. </p>
+					</section>                  
+                
+                     <!------- Conclusions & Comments ------->                    
+                    <section data-transition="fade-in fade-out">
+						<h3 style="color:#f27b25;line-height:1.6em;">Conclusions & Comments</h3>                    
+                        <ul style="font-size:32px;line-height:1.6em;">
+                            <li><span style="font-weight:bold">Conclusions:</span></li>
+                            <ul>
+                                <li style="list-style-type:circle">Payday loan borrowers prone to <span style="font-weight:bold;">"debt traps"</span></li>
+                                <li style="list-style-type:circle">Use Clarity, <span style="font-weight:bold;">best coverage</span> of payday loan data</li>
+                                <li style="list-style-type:circle">Effect of extended payment plans on <span style="font-weight:bold;">financial health</span></li>
+                                <li style="list-style-type:circle"><span style="color:#50a5de;">Positive</span> treatment effects</li>
+                                <li style="list-style-type:circle"><span style="font-weight:bold">Limitations:</span> Only 5 treated states (10 excluded)</li>
+                            </ul>
+                            <li><span style="font-weight:bold">Future Work:</span></li>
+                            <ul>
+                                <li style="list-style-type:circle">Both low & high income borrow payday loans</li>
+                                <li style="list-style-type:circle">Both may experience <span  style="color:#f27b25;">negative</span> income volatility</li>
+                                <li style="list-style-type:circle">Heterogeneous treatment effect</li>                       
+                            </ul>                    
+                        </ul>
+					</section>            
+                    
+                </section> 
+
+                <!----------------------- Section: Chapter 3 - Payday Loan (CATE) ----------------------->   
+                <section>
+                    
+                    <!------- Title ------->
+                    <section data-transition="fade-in fade-out" data-background="../slides/image/cover3.png">
+                        <h2 style="color:#50a5de;text-align:left;"><span class="circle"><span>3</span></span> Money Matters?</h2>
+                        <!--To remove all upper case, use style "text-transform: none;"-->
+                        <h4 style="color:#f27b25;text-align:left;">Deciphering the Impact of <br>Payday Loan <br>Extended Payment Plans <br>on Financial Well-being <br>amidst Income Volatility</h4>
+				    </section>   
+
+                    <!------- Motivation: 50% ------->
+                    <section data-transition="fade-in fade-out">
+                        <h3 style="color:#f27b25;">Motivation: 50%</h3> 
+                        <ul style="font-size:32px;line-height:1.5em;">                            
+                            <li> <span style="font-weight:bold;">Income Volatility still prevalent:</span></li>
+                            <ul>
+                                <li style="list-style-type:circle"><span style="font-weight:bold;">Risen</span> since 1970s</li>
+                                <li style="list-style-type:circle">Affects <span style="color:#f27b25">50%</span> population (2010)</li>
+                                <li style="list-style-type:circle">37% HHs <span style="font-weight:bold;">can't</span> cover $400 expense (2022)</li>
+                                <li style="list-style-type:circle">4.5% (or 5.9 mil) HHs "<span style="font-weight:bold;">un</span>banked"</li>
+                                <li style="list-style-type:circle">14.1% (or 18.7 mil) HHs "<span style="font-weight:bold;">under</span>banked"</li>
+                            </ul>
+                          </ul>  
+                        <br><br><p style="color:darkgray;font-size:16px;text-align: left">Source: <a href="https://lafollette.wisc.edu/research/addressing-income-volatility-of-low-income-populations/" target="_blank">Andersen et al. (2015)</a>,  <a href="https://www.federalreserve.gov/publications/files/2022-report-economic-well-being-us-households-202305.pdf" target="_blank">Federal Reserve (2023)</a>, and  <a href="https://www.fdic.gov/analysis/household-survey/index.html" target="_blank">FDIC (2023)</a>.</p>
+                        
+                    </section>                        
+                    
+                    <!------- Motivation: The Lows & Highs ------->
+                    <section data-transition="fade-in fade-out">
+                        <h3 style="color:#f27b25;">Motivation: The Lows & Highs</h3> 
+                        <img src="../slides/image/income_volatility_group.png" alt="income_volatility_group" class="center" width="850">
+                        <p style="color:darkgray;font-size:16px;text-align: left">Data source: <a href="https://www.clarityservices.com" target="_blank">Clarity</a> 2015 data. Note: “Low income” if an individual’s mean income is below third quartile of $3,524, and “high income” is above $3,524. “Low volatility” if an individual’s income CV is below 75%, and “high volatility” if it is above 75%. </p>
+                    </section>
+                    
+                    <!------- Motivation: Credit! Credit! ------->
+                    <section data-transition="fade-in fade-out">
+                        <h3 style="color:#f27b25;">Motivation: Credit! Credit!</h3> 
+                        <ul style="font-size:32px;line-height:1.5em;">                            
+                            <li>Experience <span style="font-weight:bold;">volatile Income:</span></li>                            
+                            <ul>
+                                <li style="list-style-type:circle"><span style="font-weight:bold;">No access</span> to traditional credit</li>
+                                <li style="list-style-type:circle">Or fear to  <span style="font-weight:bold;">jeopardize</span> credit</li>
+                                <li style="list-style-type:circle">Resort to <span style="font-weight:bold;">payday loans</span> &rarr; "Predatory"</li>
+                                <li style="list-style-type:circle"><span style="font-weight:bold;">Extended payment plans</span></li>
+                            </ul>
+                        </ul>
+                    </section>                    
+                    
+                    <!------- Research Question ------->
+                    <section data-transition="fade-in fade-out">
+                        <h3 style="color:#f27b25;">Research Question </h3> 
+                        <ul style="font-size:32px;line-height:1.5em;">                            
+                            <li><span style="font-weight:bold;">How do extended payment plans improve financial health of borrowers facing varying income volatility?</span></li>
+                             <li><a href="#/golden2023"><span id="SPAN_3"><fade><span style="font-weight:bold;">Extension:</span> Golden (2023)</fade></span></a></li>
+                            <ul>
+                                <li style="list-style-type:circle">From ATE to CATE</li>
+                            </ul>                            
+                            <li><span style="font-weight:bold;">Contribution:</span></li>
+                            <ul>
+                                <li style="list-style-type:circle"><span style="font-weight: bold;">Intra-year</span> (higher frequency) income volatility</li>
+                                <li style="list-style-type:circle">Implication: Financial health (policy, indicators)</li>                                
+                            </ul>
+                          </ul>     
+                        
+                    </section>   
+                    
+                    <!------- Background  ------->
+                    <section data-transition="fade-in fade-out">
+                        <h3 style="color:#f27b25;">Background</h3> 
+                        <ul style="font-size:32px;line-height:1.5em;">                            
+                            <li><a href="#/payday"><span id="SPAN_3"><fade><span style="font-weight: bold;">Payday loans:</span> features</fade></span></a></li>
+                            <li><a href="#/extended"><span id="SPAN_3"><fade><span style="font-weight: bold;">Extended payment plans:</span> features</fade></span></a></li>                    
+                          </ul>        
+                        
+                    </section>                      
+
+                    <!------- Data: Clarity Payday Loan ------->
+                    <section data-transition="fade-in fade-out">
+                        <h3 style="color:#f27b25;"> Data: Clarity Payday Loan </h3> 
+                        <ul style="font-size:32px;line-height:1.5em;">                            
+                            <li><a href="#/clarity"><span id="SPAN_3"><fade> About <span style="font-weight: bold;">Clarity</span> data</fade></span></a></li>
+                            <li><a href="#/dates"><span id="SPAN_3"><fade>About <span style="font-weight: bold;">extended payment plans</span> legal status</fade></span></a></li>  
+                            <li><span style="font-weight: bold;">Income Volatility:</span></li>
+                            <ul>
+                                <li style="list-style-type:circle">Income Coefficient of Variation</li>
+                                <li style="list-style-type:circle">\( income\_CV_{it} = \frac{SD(income_{it})}{Mean(income_{it})} \times 100\% \)</li>
+                            </ul>
+                         
+                            <li><span style="font-weight: bold;">Final Data</span>: aggregated at quarterly level for each borrower for each year</li>
+                          </ul>     
+                        <br><p style="color:darkgray;font-size:16px;text-align: left">Source: <a href="https://www.clarityservices.com" target="_blank">Clarity</a>, <a href="https://files.consumerfinance.gov/f/documents/cfpb_market-snapshot-payday-loan-extended-payment-plan_report_2022-04.pdf" target="_blank">CFPB (2022)</a>, and <a href="https://papers.ssrn.com/sol3/papers.cfm?abstract_id=2659883" target="_blank">Hannagan and Morduch (2015)</a>.</p>
+                        
+                    </section>                                          
+                
+                    <!------- Pre-Check: Borrowers Comparable ------->
+                    <section data-transition="fade-in fade-out">
+                        <h3 style="color:#f27b25;">Pre-Check: Borrowers Comparable</h3> 
+                        <ul style="font-size:32px;line-height:1.5em;">                            
+                            <li><span style="font-weight: bold;">Financial Health:</span></li>
+                            <ul>
+                                <li style="list-style-type:circle"><span style="font-weight: bold;">Treated:</span> a bit higher values</li>
+                            </ul>
+                            <li><span style="font-weight: bold;">Borrowers Chars.:</span></li>                            
+                            <ul>
+                                <li style="list-style-type:circle"><span style="font-weight: bold;">Treated:</span> more reside longer at current place, paid monthly</li>
+                                <li style="list-style-type:circle"><span style="font-weight: bold;">Control:</span> more paid weekly, the rest similar to treated</li>                                
+                            </ul>
+                          </ul>
+                    </section>                     
+                    
+                    <!------- Model: Double ML (ATE) ------->
+                    <section data-transition="fade-in fade-out">
+                        <h3 style="color:#f27b25;"> Model: Double ML (ATE)</h3> 
+                        <ul style="font-size:32px;line-height:1.5em;">                                                    
+                            \[ y = g_{0}(D, X) + \zeta,\ E[\zeta|X, D] = 0 \]
+                            \[ D = m_{0}(X) + \nu,\ E[\nu|X] = 0 \]
+                            \[ ATE = E[g_{0}(1, X) - g_{0}(0, X)] \]
+                            <li>\( g_{0}(\cdot) \) = Nonlinear function (ML model) </li>
+                            <li>\( y \) = Financial health </li>
+                            <li>\( D = 1 \) if borrower lives in treated state, 0 otherwise</li>
+                            <li>\( X \) = Borrower features</li>
+                            <li>\( m_{0}(\cdot) \) = Nonlinear function (ML model) </li>                            
+                          </ul>
+                        <br><p style="color:darkgray;font-size:16px;text-align: left">Source: <a href="https://arxiv.org/abs/1608.00060" target="_blank">Chetverikov et al. (2016)</a> and  <a href="https://academic.oup.com/ectj/article/21/1/C1/5056401" target="_blank">Chernozhukov et al (2018)</a>.</p>                        
+                    </section>   
+
+                    <!------- Model: Double ML (ATE) ------->
+                    <section data-transition="fade-in fade-out">
+                        <h3 style="color:#f27b25;"> Model: Double ML (ATE)</h3> 
+                        <ul style="font-size:32px;line-height:1.5em;">   
+                            <li>Use <span style="font-weight:bold;">5-fold</span> cross-validation</li>
+                            <li>Use <span style="font-weight:bold;">random forest</span> (ML) to get estimators for each fold</li> 
+                                <ul>
+                                    <li style="list-style-type:circle">Maximum depth: 5</li>
+                                    <li style="list-style-type:circle">Minimum sample leaf: 2</li>
+                                </ul> 
+                            <li><span style="font-weight:bold;">ATE</span>: average the five estimators</li>
+                        </ul>
+                        <br><br><p style="color:darkgray;font-size:16px;text-align: left">Source: <a href="https://arxiv.org/abs/1608.00060" target="_blank">Chetverikov et al. (2016)</a> and  <a href="https://academic.oup.com/ectj/article/21/1/C1/5056401" target="_blank">Chernozhukov et al (2018)</a>.</p>                                    
+                        
+                    </section>
+
+                    <!-------Main Results (ATE) ------->
+                    <section data-transition="fade-in fade-out">
+                        <h3 style="color:#f27b25;">Main Results (ATE)</h3> 
+                        <table style="font-size:28px;">
+						<thead>
+							<tr>
+                                <!-- Column 1 -->
+                                <th>Year</th>
+                                <!-- Column 2 -->
+								<th style="text-align:center">Amount Past Due</th>
+                                <!-- Column 3 -->
+								<th style="text-align:center">Original Charge-Off</th>
+                                <!-- Column 3 -->
+								<th style="text-align:center">Delinquency Rate</th>
+                                <!-- Column 3 -->
+								<th style="text-align:center">Charge-Off or Debt in Collections Rate</th>
+							</tr>
+						</thead>
+						
+                        <tbody>
+							<tr>                                
+                                <!-- row 1 -->                                       
+                                <td>2015</td>
+                                <td style="text-align:center" >-14.3384<br>(16.5212)</td>
+                                <td style="text-align:center">-10.7449* <br>(6.2517)</td>
+                                <td style="text-align:center">-0.0018 <br>(0.0069)</td>
+                                <td style="text-align:center">-0.0040 <br>(0.0937)</td>           
+                            </tr>
+							
+                            <tr>
+                                <!-- row 2 -->                                                                
+                                <td>2020</td>
+                                <td style="text-align:center"><span style="color:#f27b25;">-24.9912***</span> <br>(9.0751)</td>
+								<td style="text-align:center"><span style="color:#f27b25;">-15.8660***</span> <br> (2.9805) </td>     
+								<td style="text-align:center"><span style="color:#f27b25;">-0.0121*</span> <br> (0.0066) </td>               
+								<td style="text-align:center"><span style="color:#f27b25;">-0.0240**</span> <br>(0.0101) </td>               
+                            </tr>        
+                            <tr>
+                            </tr>                            
+                        </tbody>					
+                        </table> 
+                    
+                        <br>
+                      
+                        <p style="color:darkgray;font-size:16px;text-align: left">Notes: 
+                            <br>(1) All years' results are negative, no apparent pattern; 
+                            <br>(2) Amount past due & delinquency rate not significant only in 2015; 
+                            <br> (3) Charge-Off or Debt in Collections Rate not significant in 2015 & 2016; 
+                            <br>(4) 2020: -43.48% borrowers from 2019 to 2020, stimulus package effect.</p>    
+                        
+                    </section>                            
+
+                    <!------- Model: Double ML (CATE) ------->
+                    <section data-transition="fade-in fade-out">
+                        <h3 style="color:#f27b25;"> Model: Double ML (CATE)</h3>                         
+                        <ul style="font-size:32px;line-height:1.5em;">       
+                            \[ \theta_{0}(X) = E[Y(1) - Y(0)|X=x] \]
+                            <li>\( x \) = Income CV</li>
+                          </ul>
+                        <br><br><br><p style="color:darkgray;font-size:16px;text-align: left">Source: <a href="https://academic.oup.com/ectj/article-abstract/24/2/264/5899048" target="_blank"> Semenova and Chernozhukov (2021)</a> and <a href="https://docs.doubleml.org/stable/examples/py_double_ml_cate.html" target="_blank">Microsoft (2023)</a>.</p>
+                        
+                    </section>                       
+
+                    <!------- Model: Main Results (CATE) ------->
+                    <section data-transition="fade-in fade-out">
+                        <h3 style="color:#f27b25;">CATE: Amount Past Due</h3> 
+                                                
+                        <img src="../slides/image/CATE.png" alt="CATE" class="center" width="800">
+
+                    </section>   
+                    
+                    <!------- Conclusions & Comments ------->
+                    <section data-transition="fade-in fade-out">
+                        <h3 style="color:#f27b25;"> Conclusions & Comments</h3> 
+                        <ul style="font-size:32px;line-height:1.5em;">     
+                            <li><span style="font-weight:bold;">Conclusion:</span></li>
+                            <ul>
+                                <li style="list-style-type:circle">Treatment effect varies from year to year, <span style="font-weight: bold;">no clear pattern</span></li>
+                                <li style="list-style-type:circle">Between <span style="font-weight: bold;">first quartile and median</span>: most benefit</li>
+                                <li style="list-style-type:circle">Beyond <span style="font-weight: bold;">third quartile</span>: little to no benefit</li>
+                            </ul>
+                            <li><span style="font-weight:bold;">Comments:</span></li>
+                            <ul>
+                                <li style="list-style-type:circle">Income CV <span style="font-weight: bold;">invariant</span> to scales or absolute changes in income</li>
+                                <li style="list-style-type:circle">Not show <span style="font-weight: bold;">income dynamics</span> over time</li>
+                                <li style="list-style-type:circle"><span style="font-weight: bold;">Future work:</span> use other income volatility measurements</li>
+                            </ul>                            
+                          
+                        </ul>   
+                        
+                    </section>                                             
+                    
+                </section>
+                
+                <!----------------------- Section: Q & A ----------------------->   
+                
+                     <!------- Q & A ------->                    
+                    <section data-transition="fade-in fade-out" data-background="../slides/image/Q_A.png">
+                         <h1 style="color:#f27b25">&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; Q & A</h1>
+                     </section>
+                
+			</div>
+		</div>
+        
+		 <!------- Script: reveal initialize
+        <script>
+			Reveal.initialize();
+		</script> ------->    
+
+        <script src="../slides/dist/reveal.js"></script>
+		<script src="../slides/plugin/zoom/zoom.js"></script>
+		<script src="../slides/plugin/notes/notes.js"></script>
+		<script src="../slides/plugin/search/search.js"></script>
+		<script src="../slides/plugin/markdown/markdown.js"></script>
+		<script src="../slides/plugin/highlight/highlight.js"></script>
+		<script>
+			// Also available as an ES module, see:
+			// https://revealjs.com/initialization/
+			Reveal.initialize({
+				controls: true,
+				progress: true,
+				center: true,
+				hash: true,
+
+				// Learn about plugins: https://revealjs.com/plugins/
+				plugins: [ RevealZoom, RevealNotes, RevealSearch, RevealMarkdown, RevealHighlight ]
+			});
+		</script>
+	</body>
+</html>
