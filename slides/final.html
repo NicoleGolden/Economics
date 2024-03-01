@@ -15,11 +15,6 @@
           src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js">
         </script>    
         <script src="../slides/plugin/notes/notes.js"></script>
-        <script>
-            Reveal.initialize({        
-                plugins: [ RevealNotes ]    
-            });
-        </script>
     
         <!------- Style for circle number in each chapter ------->        
         <style>
@@ -1204,16 +1199,28 @@
         <script src="https://cdn.jsdelivr.net/npm/reveal.js-plugins@latest/audio-slideshow/recorder.js"></script>
         <script src="https://cdnjs.cloudflare.com/ajax/libs/RecordRTC/5.6.2/RecordRTC.js"></script>        
 		<script>
-			// Also available as an ES module, see:
 			// https://revealjs.com/initialization/
 			Reveal.initialize({
 				controls: true,
 				progress: true,
 				center: true,
 				hash: true,
-
 				// Learn about plugins: https://revealjs.com/plugins/
-				plugins: [ RevealZoom, RevealNotes, RevealSearch, RevealMarkdown, RevealHighlight ]
+				plugins: [ RevealZoom, RevealSearch, RevealNotes, RevealMarkdown, RevealHighlight ]
+                multiplex:{
+                // To generate your own, see the socket.io server instructions.
+                secret: '17093224787158560994', // Obtained from the socket.io server. Gives this (the master) control of the presentation
+                id: 'c6bbc7bb752b8e2c', // Obtained from socket.io server
+                url: 'https://reveal-multiplex.glitch.me/' // Location of socket.io server
+              },
+              //Dependencies
+              dependencies: [
+                { src: 'https://reveal-multiplex.glitch.me/socket.io/socket.io.js', async: true },
+                { src: 'https://reveal-multiplex.glitch.me/master.js', async: true },
+
+                // and if you want speaker notes
+                { src: 'https://unpkg.com/reveal-notes-server/client.js', async: true }
+              ]
 			});
 		</script>
 	</body>
