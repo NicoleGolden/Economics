@@ -702,7 +702,8 @@
                             <li>Balance pre- & post-treatment periods for control units</li>
                             <li><span style="font-weight: bold;">Increase precision</span> of treatment effect estimates</li>                            
                         </ul>
-                        <br><br><p style="color:darkgray;font-size:16px;text-align: left">Notes: Unit weights in a simpler term: \( \sum_{i=1}^{N_{co}}  \hat{w}_{i}Y_{it} \approx N_{tr}^{-1}\sum_{i=N_{co}+1}^{N}Y_{it} \) for all \( t = 1, 2, ..., T_{pre} \). Time weights in simpler term, \( \sum_{t=1}^{T_{pre}}\lambda_{t}Y_{it}\approx T_{post}^{-1}\sum_{T_{pre}+1}Y_{it} \) for all \( i=1, 2, ..., N_{co} \).</p>                        
+                        <br><br><p style="color:darkgray;font-size:16px;text-align: left">Note 1: Unit weights in a simpler term: \( \sum_{i=1}^{N_{co}}  \hat{w}_{i}Y_{it} \approx N_{tr}^{-1}\sum_{i=N_{co}+1}^{N}Y_{it} \) for all \( t = 1, 2, ..., T_{pre} \). <br>
+                        Note 2: Time weights in simpler term, \( \sum_{t=1}^{T_{pre}}\lambda_{t}Y_{it}\approx T_{post}^{-1}\sum_{T_{pre}+1}Y_{it} \) for all \( i=1, 2, ..., N_{co} \).</p>                        
                         <!------- speaker  notes ------->
                         <aside class="notes">
                         So what are unit and time weights exactly? What do they do?<br>   
@@ -915,7 +916,8 @@
                     <section data-transition="fade-in fade-out">
                         <h3 style="color:#f27b25;">Motivation: The Lows & Highs</h3> 
                         <img src="../slides/image/income_volatility_group.png" alt="income_volatility_group" class="center" width="850">
-                        <p style="color:darkgray;font-size:16px;text-align: left">Data source: <a href="https://www.clarityservices.com" target="_blank">Clarity</a> 2015 data. Note: “Low income” if an individual’s mean income is below the third quartile of $3,524, and “high income” is above $3,524. “Low volatility” if an individual’s income CV is below 75%, and “high volatility” if it is above 75%. </p>
+                        <p style="color:darkgray;font-size:16px;text-align: left">Data source: <a href="https://www.clarityservices.com" target="_blank">Clarity</a> 2015 data. <br>
+                        Note: “Low income” if an individual’s mean income is below the third quartile of $3,524, and “high income” is above $3,524. “Low volatility” if an individual’s income CV is below 75%, and “high volatility” if it is above 75%. </p>
                         <!------- speaker  notes ------->
                         <aside class="notes">
                         Now you may think those HHs who experience income volatility are probably all low income HHs. That's not quite the whole picture. 
