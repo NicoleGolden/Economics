@@ -150,7 +150,9 @@
                     <section data-transition="fade-in fade-out">
                         <h3 style="color:#f27b25">Background: Dairy vs Plant Milk</h3>
                         <img src="../slides/image/dairy_plant.png" alt="dairy_plant" class="center" width="1000">
-                        <p style="color:darkgray;font-size:16px;text-align: left">Source: <a href="https://plantbasedfoods.org/latest/2019-data-plant-based-market" target="_blank">Plant Based Foods Association (2020)</a>, <a href="https://www.sciencedirect.com/science/article/pii/S0023643819305997" target="_blank">Gerliani, Hammami and Aider (2019)</a>, and <a href="https://www.tandfonline.com/doi/full/10.1080/10454446.2020.1857318" target="_blank">Boaitey and Minegishi (2020)</a>. <br>Image source: author.</p>
+                        <p style="color:darkgray;font-size:16px;text-align: left">Source: <a href="https://plantbasedfoods.org/latest/2019-data-plant-based-market" target="_blank">Plant Based Foods Association (2020)</a>, <a href="https://www.sciencedirect.com/science/article/pii/S0023643819305997" target="_blank">Gerliani, Hammami and Aider (2019)</a>, and <a href="https://www.tandfonline.com/doi/full/10.1080/10454446.2020.1857318" target="_blank">Boaitey and Minegishi (2020)</a>. 
+                        <br>Image source: author. 
+                        <br>Note: The nutrients such as vitamins, iron, protein, and calcium can be found in both types of milk.</p>
                         <!------- speaker  notes ------->
                         <aside class="notes">
                         Here's a comparison of dairy and plant-based milk. In terms of sales growth in 2019, dairy milk experienced only a 0.1% increase, whereas it's 5% for plant-based milk. Traditional dairy milk contains lactose. It can be made lactose-free of course. But plant-based milk is inherently lactose-free. Dairy milk is a type of conventional beverage because it's been around since the 19th century, whereas plant-based milk is a type of functional beverage. It's designed not only to satisfy our desire for a milk-like taste but also our nutritional needs. Lastly, plant-based milk has many other advantages in this modern world: such as lower environmental impact, as you can see from the figures here. Its production doesn't involve animals; it satisfies a flexitarian lifestyle, so if you're vegan or allergic to dairy milk, plant-based milk is a more suitable alternative. During COVID-19, many people also started to consume plant-based milk instead of just dairy milk.             
@@ -189,7 +191,7 @@
                         <ul style="font-size:32px;line-height:1.5em;">
                             <li><span style="font-weight:bold;">Movers & non-movers are comparable:</span></li>
                             <ul>
-                                <li style="list-style-type:circle"><span style="font-weight:bold;">Movers</span>: a bit more white/older, higher income/educ</li>
+                                <li style="list-style-type:circle"><span style="font-weight:bold;">Movers</span>: a bit higher milk purchases (expenditures, quantity), more white/older, higher income/educ</li>
                                 <li style="list-style-type:circle"><span style="font-weight:bold;">Non-movers</span>: slightly larger HH size, higher employment rate, more young children</li>
                             </ul>
                             <li><span style="font-weight:bold;">HHs move at random:</span></li>
@@ -214,7 +216,7 @@
                         <aside class="notes">
                         Finally, I want to make sure that, after the move, there's indeed an increase or a decrease in milk consumption using an event study. The figures here show that: for both types of milk, the pre-move coefficients are close to zero. After the move, there is a clear increase trend for dairy milk and a decrease trend for plant-based milk. Next, we'll turn to the difference-in-differences model, or we call it DiD model, to quantify the exact expenditure changes.
                         <br><br>
-                        <span style="color:red;">Note 1:</span> The plots suggest that: (+0.8% for dairy, -0.1% for plant-based milk) before the move, there was little evidence of divergence in expenditures for both types of milk. Post move, HHs increase their dairy milk expenditures and decrease plant-based milk expenditures.)  
+                        <span style="color:red;">Event study results</span>: +0.8% for dairy, -0.1% for plant-based milk. 
                         </aside>                             
                     </section>
 
@@ -274,7 +276,9 @@
                         <br><br><p style="color:darkgray;font-size:16px;text-align: left">Note: The SEs are clustered at HH level. *** Significant at 1 percent level.** Significant at 5 percent level.* Significant at 10 percent level.</p>  
                         <!------- speaker  notes ------->
                         <aside class="notes">
-                        Here are the DiD main results. To make the interpretations easier, I've only included coefficients for the treatment variable. We can see that, post move, there's a 1.2% increase in dairy milk expenditure, significant at the 95% level. And there's a 1.5% decrease in plant-based milk expenditure, significant at the 90% level.              
+                        Here are the DiD main results. To make the interpretations easier, I've only included coefficients for the treatment variable. We can see that, post move, there's a 1.2% increase in dairy milk expenditure, and a 1.5% decrease in plant-based milk expenditure. Both results are significant.<br> 
+                        These results show that: dairy milk is still the dominant type of milk consumed in the US. Meanwhile, the plant-based milk has a price premium. And Nielsen may not record plant-based milk purchases in enough markets since some types of plant-based milk became popular later.
+                        <br><br><span style="color:red;">Plant milk data</span>: Between 2006 and 2007, only soy, rice, and oat milk are identified in Nielsen data. In 2008, almond milk data was added to the data. Flax milk is not identified until the year 2011. Cashew milk has been found in the data since the year 2014.
                         </aside>                             
                     </section>                    
 
@@ -360,8 +364,8 @@
                         By interacting "size of move" with treatment variable, we get \( \beta \), our interest. It measures how much the milk expenditures converge toward the new states’ average. 
                         <br><br>
                         <span style="color:red;">Note 1:</span> This model uses movers data only.<br>
-                        <span style="color:red;">Note 2:</span> "size of move" is calculated non-movers data only. To compute state-level average outcomes: first average across HHs in each quarter and each state using sample weights (and info on the number of children), then take an average across time periods. You can simply think of this as expenditure of self regress on expenditure difference of others (who are in your new or old states))<br> 
-                        <span style="color:red;">Note 3:</span> \( \beta \) measures the fraction of difference between new state and old state that has been covered. This way, the size of the jump after the move measures the share of the average difference between areas that is attributable to the current environment.)
+                        <span style="color:red;">"size of move"</span>: It's calculated with non-movers data only. To compute state-level average outcomes: first average across HHs in each quarter and each state using sample weights (and info on the number of children), then take an average across time periods. You can simply think of this as expenditure of self regress on expenditure difference of others (who are in your new or old states))<br> 
+                        <span style="color:red;">\( \beta \) </span>: It measures the fraction of difference between new state and old state that has been covered. This way, the size of the jump after the move measures the share of the average difference between areas that is attributable to the current environment.)
                         </aside>                             
                     </section>      
 
@@ -400,7 +404,8 @@
                         <br><br><p style="color:darkgray;font-size:16px;text-align: left">Note: The SEs are clustered at HH level. *** Significant at 1 percent level.** Significant at 5 percent level.* Significant at 10 percent level.</p>  
                         <!------- speaker  notes ------->
                         <aside class="notes">
-                        In this table, we can see that, 53% of the increase in dairy milk consumption can be explained by the new local environment, and 17% of the decrease in plant-based milk consumption can be explained by the new local environment. Both results are significant.
+                        In this table, we can see that, 53% of the increase in dairy milk consumption can be explained by the new local environment, whereas it's only 17% for the plant-based milk. Both results are significant.<br>
+                        This variation may be reasonable since dairy milk is still the dominant type of milk consumed in the U.S. Another reason is that there are more movers among dairy milk consumers than plant-based consumers since plant-based milk is a more recent product, and it has a price premium.
                         </aside>                             
                     </section>                         
                     
@@ -481,10 +486,14 @@
                                     <li style="list-style-type:circle">15 states passed to protect consumers (2020)</li>
                                 </ul>                                
                         </ul>
-                        <br><br><p style="color:darkgray;font-size:16px;text-align: left">Source: <a href="https://files.consumerfinance.gov/f/documents/cfpb_consumer-use-of-payday-auto_title-pawn_loans_research-brief_2021-05.pdf" target="_blank">CFPB (2021)</a> and <a href="https://www.pewtrusts.org/-/media/assets/2016/06/payday_loan_facts_and_the_cfpbs_impact.pdf" target="_blank">The Pew Charitable Trusts (2016)</a>.</p>                          
+                        <br><br><p style="color:darkgray;font-size:16px;text-align: left">Source: <a href="https://files.consumerfinance.gov/f/documents/cfpb_consumer-use-of-payday-auto_title-pawn_loans_research-brief_2021-05.pdf" target="_blank">CFPB (2021)</a> and <a href="https://www.pewtrusts.org/-/media/assets/2016/06/payday_loan_facts_and_the_cfpbs_impact.pdf" target="_blank">The Pew Charitable Trusts (2016)</a>. <br>
+                        Note: If a state limits payday loan APR to 36%, it's considered as "effective ban" since the APR is close to traditional bank's APR, and it's not profitable for payday lenders anymore.</p>                          
                         <!------- speaker  notes ------->
                         <aside class="notes">
                         In my study, I'd like to focus on the group who have non-prime credits. The non-prime consumers tend to take out payday loans. According to CFPB, there are 12 million payday loan users per year. People are attracted to borrow payday loans because they are typically small-dollar, short-term, and unsecured. However, payday loans are very costly. Typically the APRs are between 300 to 500%. As of 2020, 22 states either banned or effectively banned payday loans, because they see payday loans as predatory loans. Among the rest of the states where payday loans are still legal, 15 states passed so-called extended payment plans to protect payday loan borrowers. 
+                        <br><br><span style="color:red;">Calculate APR</span>: Say borrow $500 loan with interest rate 20% and pay back in 14 days. The charge is 500*0.2 = $100. Total fees in a year = 0.2 x 365 days = $73, then rate for each payday day = $73 ÷ 14 days = 5.21, so APR = 5.21 x 100 = 521%.
+                        <br><span style="color:red;">Effective ban</span>: if APR = 36%, the interest rate is about 1.4%.
+                        <br><span style="color:red;">Small-dollar loan</span>: payday loan, auto title loan, pawnshop loan, Buy Now, Pay Later (BNPL) ("Klarna"), rent-to-own agreement.
                         </aside>                             
 					</section>  
 
@@ -562,10 +571,13 @@
                                 <li style="list-style-type:circle">5 treated states & 14 control states</li>                   
                             </ul>
                         </ul>
-                        <p style="color:darkgray;font-size:16px;text-align: left">Source: <a href="https://www.clarityservices.com" target="_blank">Clarity</a>. <br>Note: The 14 control states are: HI, IL, IA, KS, KY, MN, MS, MO, NE, ND, OK, RI, TN, and TX.</p>
+                        <p style="color:darkgray;font-size:16px;text-align: left">Source: <a href="https://www.clarityservices.com" target="_blank">Clarity</a>. <br>Note: Clarity specializes in providing underwriting services and information to lenders who offer alternative credit products such as payday loans. The 14 control states are: HI, IL, IA, KS, KY, MN, MS, MO, NE, ND, OK, RI, TN, and TX.</p>
                         <!------- speaker  notes ------->
                         <aside class="notes">
                         The main data I use for the study is Clarity payday loan data. Clarity is the largest payday loan data in the market, which covers 60 million or 70% of non-prime consumers in the US. It has 6 years of data from 2015 to 2020. It covers imporant borrower's characteristics, such as age, income, and pay frequency, which helps us to improve our estimates. In my study, I have constructed 4 financial health related indicators: amount past due, original charge-off, delinquency rate, charge-off or debt-in-collections rate. The final data is aggregated at a quarterly level for each state. In the end, we have 5 treated states and 14 control states. 
+                        <br><br><span style="color:red;">charge-off def</span>: It is a declaration by a creditor that an amount of debt is unlikely to be collected. This occurs when a consumer becomes severely delinquent on a debt. Traditionally, creditors make this declaration at the point of 6 months without payment. A charge-off is a form of write-off.
+                        <br><span style="color:red;">Debt collection def</span>: It's when a collection agency or company tries to collect past-due debts from borrowers.
+                        <br><span style="color:red;">Self-selection issue:</span> Selection bias arises when treatment and control groups are not comparable. This can happen in DiD model. <span style="font-weight:bold;">In SDID</span>, we use unit weights to make pre-treatment control and treated units comparable, and we use time weights to make pre- and post-treatment periods comparable for control units. In the end, we are comparing the observed outcomes for treated units and outcomes for synthetic control, which is the counterfactual version of treated units. This will give us the ATT we want.   
                         </aside>                             
 					</section>                      
 
@@ -630,7 +642,8 @@
                         <aside class="notes">
                         Another important data source is each state's deferred deposit transaction law or payday loan law. That's where I identify the exact dates when extended payment plans took effect. Then I can construct treatment variables with these dates. The table here lists the five treated states. The 2 important columns are "state treated" and "quarter being treated". We can see that some states are treated earlier, some later.
                         <br><br> 
-                        <span style="color:red;">Note:</span> In total, there are 24 quarters since there are 6 years. The rest of the 10 treated states are excluded since the sample data I have do not have pre-treatment data.
+                        <span style="color:red;">3 treated states are conservative:</span>: FL, LA, UT. As of 2020: Payday loans are almost twice likely to be legal in conservative states. For extended payment plans, conservative states are more likely to pass these laws to protect borrowers. <span style="font-weight: bold;">Explanation:</span> Payday loans are legal in more conservative states, so there's chance more conservative states that pass extended payment plans to protect consumers. (Payday loans are a bit less than three times likely to be banned in liberal states)
+                        <br><span style="color:red;">Note:</span> In total, there are 24 quarters since there are 6 years. The rest of the 10 treated states are excluded since the sample data I have do not have pre-treatment data.
                         </aside>                             
                     </section>                                               
                     
@@ -675,15 +688,22 @@
                         <!------- speaker  notes ------->
                         <aside class="notes">
                         To identify the treatment effects of the extended payment plans, I use a synthetic DiD model, or I call it SDID here. At first glance, it looks very similar to DiD model but with two extra terms at the end.<br> 
-                        Let me quickly go through some key notations in this equation: <br>
-	                    \( Y_{it} \) is the financial health variable in state i, quarter t<br>
-	                    \( \mu \) is the intercept<br>
-	                    \( \alpha_{i} \) and \(\beta_{t} \) are the state and quarter  FE <br>
-	                    \( \tau \) is our interest, the average treatment effect on the treated, or ATT <br>
-	                    \( D_{it} \) is the treatment variable<br>
-	                    \( w_{i} \) and \( \lambda_{t} \) are unit and time weights, which I will introduce more later.<br>
+                        Let me quickly go through some key notations in this equation: (go through each notation)
+	                    <br>
                         The capital N is total units or states, so here \( N = 19 \) since we have 14 control states and 5 treated states. <br>
- 	                    And capital T is total time or quarters, so here \( T = 24 \) since in 6 years we have 24 quarters.<br>
+ 	                    And capital T is total time or quarters, so here \( T = 24 \) since in 6 years we have 24 quarters.
+                        <br><br><span style="color:red;">Why not DID or SC model?</span> DID requires strictly parallel trend, it's hard to test here. SC is typically applied in cases where we have a single treated unit. SC also does not balance outcomes for control units pre- and post-treatment. (This can be an issue if pre- and post-treatment outcomes are too different for control units).
+                        <br><span style="color:red;">Why use SDID?</span> SDID can be used for policy evaluation with panel data. Like DiD model: SDID can applied in cases where we have multiple treated units, and it gives parallel trend. Similar to SC model: SDID re-weights and matches pre-treatment trends to weaken reliance on parallel trend assumption. In addition, SDID increases precision of treatment effect estimates by making the outcomes of post-treatment and pre-treatment comparable for control units. That's why we use the time weights. Compared with DiD and SC, both theoretically & empirically, SDID has more desirable robustness properties, and it performs well in settings where conventional estimators are commonly used in practice.
+                        <br><span style="color:red;">2-way FE</span>: SDID is basically 2-way FE with weights (or weighted least squares, WLS), where weights are \( w_{i} \times \lambda_{t} \). The code looks like `lm(y ~ D, weights)`. The WLS can be thought as as "weighted" where obs are assigned different weights, where \( \hat{\beta}_{WLS} = (X^\prime WX)^{-1}(X^\prime Wy) \)
+                        <br><span style="color:red;">SDID assumption</span>: SDID assumes that there exist unit and time weights such that the averaged treated units and the weighted average of control units satisfy a parallel trends assumption. <br>
+                        SDID relaxes the parallel trends assumption in DID, whereas DID strictly require parallel trend assumption, which assums parallel trends for all units and all time periods. 
+                        <br><span style="color:red;">SDID pros & cons</span>: Pros: use unit and time weights to get more robust treatment estimates. Cons: It requires a balanced panel (same for SC, DiD doesn’t). If the data is large, it’s computationally heavy.
+                        <br><span style="color:red;">SDID ATT works like this</span>: 
+                            \( \hat{\tau}(w, \lambda) =\)<br>
+                            \( (weighted\ post\ treated - weighted\ post\ control) -\)<br> 
+                            \( (weighted\ pre\ treated - weighted\ pre\ control) =\)<br> 
+                            \( (w_{tr}^{\intercal}Y_{tr, post}\lambda_{post} -w_{co}^{\intercal}Y_{co,post}\lambda_{post}) -\)<br> 
+                            \( (w_{tr}^{\intercal}Y_{tr, pre}\lambda_{pre} - w_{co}^{\intercal}Y_{co,pre}\lambda_{pre}) \)
                         </aside>                             
                     </section>  
                     
@@ -692,7 +712,7 @@
 						<h3 style="color:#f27b25">SDiD: Weights</h3>
                         <ul style="font-size:32px;line-height:1.6em;">
                             <span style="font-size:30px;">
-                        \[ Unit: \hat{w}_{i} = argmin\| \bar{y}_{pre, tr} - (w_{0} + Y_{pre, co}w_{co})\|_{2}^{2} + \zeta T_{pre}\|w_{co}\|^2_{2} \]
+                        \[ Unit: \hat{w}_{i} = argmin\| \bar{y}_{pre, tr} - (w_{0} + Y_{pre, co}w_{co})\|_{2}^{2} + \zeta^{2} T_{pre}\|w_{co}\|^2_{2} \]
                             </span>
                             <li>Match pre-treatment trends between control & treated units</li>
                             <li><span style="font-weight: bold;">Parallel trend</span> &rarr; exploits advantages of DiD & SC</li>
@@ -706,10 +726,15 @@
                         Note 2: Time weights in simpler term, \( \sum_{t=1}^{T_{pre}}\lambda_{t}Y_{it}\approx T_{post}^{-1}\sum_{T_{pre}+1}Y_{it} \) for all \( i=1, 2, ..., N_{co} \).</p>                        
                         <!------- speaker  notes ------->
                         <aside class="notes">
-                        So what are unit and time weights exactly? What do they do?<br>   
+                        So here we have unit weights and time weights.<br>   
                         Simply put: Unit weights match the pre-treatment trends between treated & control units. Another way to show how the unit weights work mathematically is the equation in the notes. Basically, the unit weights minimize the difference between the weighted average of the pre-treated outcome of control units and the pre-treated outcome of treated units.<br> 
                         This is similar to what synthetic control does, except that we will have a parallel trend because we included an intercept term \( w_{0} \) here.<br> 
                         The time weights here are used to balance pre-treatment and post-treatment periods for control units. Another way to show how the time weights work mathematically is the equation in the notes. Basically, the times weights minimize the difference between the weighted average of the pre-treated outcome of control units and the post-treated outcome of control units. 
+                        <br><br><span style="color:red;">Weight constraints</span>: Constraints for unit weights: \( \sum w_{i} = 1 \) and \( w_{i} > 0 \) \( \forall \) \( i \), or unit weights for all states in each quarter \( t \) sum up to 1. Constraits for time weights: \( \sum \lambda_{t} = 1 \) and \( \lambda_{t} > 0 \) \( \forall \) \( t \), so time weights for all pre-treatment period in each state \( i \) sum up to 1. The procedure of getting unit weights is basically regressing the average outcome of the treated units on the control units. For time weights: regressing average outcome of post-treated control units on pre-treated control units. 
+                        <br><span style="color:red;">Final weights</span>: = unit weights * time weights. The weights in SDID estimator makes the 2-way FE regression "local" (1) it puts more weights on (control) units that on average are similar in terms of their past to the treated units. (2) it puts more weights on (pre-treat) periods that are on average similar to the treated periods.
+                        <br><span style="color:red;">\( \lambda_{0} \)</span>: It allows the post-treatment period to be above/below all pre-treatment periods. This is helpful to give us a clear positive/negative trend.
+                        <br><span style="color:red;">L2 penalty</span>: The \( \zeta^{2} T_{pre}\|w_{co}\|^2_{2} \) term is L2 penalty term to the unit weights. It helps non-zero weights to be more distributed across the control units. So it ensures we don't have very big weights, which forces us to use more units.<br>
+                        It's theoretically motivated.  \( \zeta = (N_{tr} * T_{post})^{1/4} \sigma (\Delta_{it}) \), where \( (\Delta_{it}) = Y_{it} - Y_{i(t-1)}\), and \( \sigma (\Delta_{it}) \) is the SD of the difference.
                         </aside>                             
 					</section>  
                 
@@ -738,7 +763,9 @@
                         <br><p style="color:darkgray;font-size:16px;text-align: left">Notes: The red line represents the treated state, and the gray line is the synthetic control state.</p>                    
                         <!------- speaker  notes ------->
                         <aside class="notes">
-                        Here's a demonstration of a synthetic DiD plot for the outcome "amount past due". The gray line is for synthetic control, and the red line is for the treated state. Take Nevada as an example: it was treated before quarter 11, and we can see a parallel trend pre-treatment. After the treatment, Nevada appears to have a reduction of the amount past due on average compared to its counterpart. Similar results are shown in the rest of the four treated states.
+                        Here's a demonstration of a synthetic DiD plot for the outcome "amount past due". The gray line is for synthetic control, and the red line is for the treated state. Take Nevada as an example: it was treated before quarter 11, and we can see a parallel trend pre-treatment. After the treatment, Nevada appears to have a reduction of the amount past due on average compared to its counterpart. Similar results are shown in the rest of the four treated states. 
+                        <br><br>    
+                        <span style="color:red;">Note:</span> Red line: raw outcomes for the treated state; gray line: synthetic contorl, after applying unit and time weights on raw outcomes for each control state.
                         </aside>                             
                     </section>    
                     
@@ -842,7 +869,7 @@
                             </tr>                            
                         </tbody>
 					</table>                        
-                        <br><p style="color:darkgray;font-size:16px;text-align: left">Note: The five fake (randomly sampled) treated states are OK, TX, MO, KY, and NE. The model includes all borrower characteristics, state FE, and quarter FE. The SEs for the SDiD model are obtained by bootstrap with 1,000 iterations. </p>
+                        <br><p style="color:darkgray;font-size:16px;text-align: left">Note: The five fake treated (randomly assigned) states are OK, TX, MO, KY, and NE. The model includes all borrower characteristics, state FE, and quarter FE. The SEs for the SDiD model are obtained by bootstrap with 1,000 iterations. </p>
                         <!------- speaker  notes ------->
                         <aside class="notes">
                         Of course, we'll need to do a robustness check as usual. Similar to the previous robustness check, first, I remove the 5 treated states from the data. Then I randomly select 5 states as fake "treated" states. Then re-run the same SDID model. This table shows the results. We can see that the coefficients are small and non-significant. We can conclude that the treatment effects are indeed causal.
@@ -908,7 +935,10 @@
                         <!------- speaker  notes ------->
                         <aside class="notes">
                         The motivation behind this topic is that, income volatility is still prevalent in the US. Income volatility has risen since the 1970s, and it has affected about half the population in 2010. Notably, 37% of US HHs can't come up with a $400 cash or its equivalent to cover emergency bills. A recent FDIC survey shows that 6 million HHs are "unbanked" and 19 million of HHs are "underbanked".<br><br>
-                        <span style="color:red;">Note:</span> using percentage: 5% of HHs are "unbanked" and 14% of them are "underbanked". The "underbanked" are: HH in the past 12 months used some credit products that are commonly used unbanked consumers, such as payday loan, pawn shop, auto title loans.
+                        <span style="color:red;">Banked def:</span>
+                        <span style="font-weight:bold;">"Unbanked"</span>:  if no one in the HH held a checking or savings account at a bank or credit union. 
+                        <span style="font-weight:bold;">"underbanked"</span>: The HH in the past 12 months used some credit products that are commonly used unbanked consumers, such as payday loan, pawn shop, and auto title loans. 
+                        <br><span style="color:red;">Note:</span> using percentage: 5% of HHs are "unbanked" and 14% of them are "underbanked". 
                         </aside>                             
                     </section>                        
                     
@@ -1001,7 +1031,8 @@
                         <!------- speaker  notes ------->
                         <aside class="notes">
                         I'll also skip the Clarity data and the extended payment plans legal status. What I'd like to add here is the definition of income volatility. There are many ways to quantify income volatility. In my research, I decided to use the income coefficient of variation, or I just call it income CV. We get income CV by dividing the standard deviation of income by the mean of income and multiplying by 100%. So income CV will always be positive, It indicates the magnitude of the changes in income and covers the changes of income in both directions, positive or negative. And the larger the values are, the more volatile the income is. The final data is aggregated at a yearly level for each borrower. So there will be 6 separate sample data, for 2015, 2016, 2017, etc. In 2015, there were about 1500 borrowers in treated states & 4 thousand borrowers in control states. For the rest of the years, the borrowers may increase or decrease a bit.<br><br>
-                        <span style="color:red;">Note:</span> Income CV is used in various papers, such as Hannagan and Morduch (2015), which uses the US Financial Diaries data to study income volatility. 
+                        <span style="color:red;">Other income volatility measure:</span> (1) <span style="font-weight: bold;">Income percentage change</span>, shows magnitude & direction. We don't use it because most income does not change over the year, so it doesn't generate enough variation for our analysis. (2) <span style="font-weight: bold;">Spikes and dips</span>, shows magnitude, direction, and frequency. It's a spike if the income is greater than 125% of an individual’s mean income and a dip if the income is less than 75%. We don't use it since interpretation may be not that straightforward: the spikes and dips go both directions.   
+                        <br><span style="color:red;">Note:</span> Income CV is used in various papers, such as Hannagan and Morduch (2015), which uses the US Financial Diaries data to study income volatility.
                         </aside>                             
                     </section>                                          
                 
@@ -1044,7 +1075,8 @@
                         To estimate conditional average treatment effect or CATE, I'll need to estimate ATE first. The model I'll be using is double machine learning, or I call it DML.                            
                         The first equation is our main equation: which estimates the treatment effect, \( \tau \), which is the difference between mean treated outcomes and control outcomes, shown in equation 3. The second equation keeps track of the dependence of the treatment variable D on controls X.  This equation is not our main interest, but it is important for removing regularization bias. The confounding factors X affect the policy variable D through function \( m_{0}(X) \) and the outcome variable through function \( g_{0}(X) \). <br>
                         So the functions \( g_{0}(\cdot) \) and \( m_{0}(\cdot) \) are some non-linear machine learning model, which I'll introduce more later. Y is the financial health variable, D is treatment variable, X is a set of borrowers' features such as age, housing status. And \( \tau \) is the ATE we want to identify.
- 
+                        <br><br><span style="color:red;">Why use DML model?</span> (1) DML is designed as a "causal model" in mind. We can def use it to estimate treatment effect for my purpose. (2) It uses the non-linearity of some ML model, which gives us better estimates. (3) DML is a very elegant model, which uses FWL theorem. It also applies to the type of data I have.   
+                        <br><span style="color:red;">DML assumptions?</span> (1) \( E[\zeta|X, D] = 0 \), (2) \( E[\nu|X] = 0 \).
                         </aside>                             
                     </section>   
 
@@ -1070,6 +1102,8 @@
                         In residualized y and D: all variance due to X is explained way.
                         That's how in step 2, we can get the causal effect \( \tau \).<br>
                         The machine learning I'll use is random forest. To avoid overfitting, we'll use 5-fold cross-validation, which is a pretty common setting. I use random forest because of its efficiency and great prediction performance. The final ATE is the average of the 5-fold estimates.
+                        <br><br><span style="color:red;">Random forest procedure</span>: (1) Draw a bootstrap sample \( s_{m} \) of the sample size as the data (with replacement). (2) Grow a decision tree on $s_{m}$. In each step, we need to select \( v \) less than \( V \) variables to find the best split. (3) Repeat Step 1 and Step 2 for specified M times. Averaging (or Voting) will take place by averaging (or selecting the majority vote) the decision tree. (4) Average (or select the most voted) prediction result as the final prediction result. Note: The model takes averaging for regressions, and it takes majority vote for classifications.
+                         <img src="../slides/image/rf.png" alt="rf" class="center" width="500">    
                         </aside>                             
                     </section>
 
@@ -1129,6 +1163,7 @@
                         Second, both federal and local governments implemented various stimulus and relief measures that reduced the need for payday loans.<br>
                         On top of that, the consumers simply spent less during the pandemic.<br>
                         For these reasons, I include the 2020 result just for reference. We can see the effect is quite large here. But we can't really take that as it is due to the COVID-19 shocks.    
+                        <br><br><span style="color:red;">Why DML on year-level data?</span> (1) We don't observe any policy changes or large economic shocks (except for 2020) that could affect payday loan lending. (2) I want to aggregate it to year level so that I can compare CATE for multiple years. (3) Each feature can be treated as time-invariant; thus, it will not suffer from omitted variable bias. (4) Another reason is data limitation: The income is recorded as net monthly income. If we cannot observe enough variations in income within a month, we cannot compute income CV if we want to use monthly-level data (a more granular level).  
                         </aside>                             
                     </section>                            
 
