@@ -727,9 +727,9 @@
                         <!------- speaker  notes ------->
                         <aside class="notes">
                         So here we have unit weights and time weights.<br>   
-                        Simply put: Unit weights match the pre-treatment trends between treated & control units. Another way to show how the unit weights work mathematically is the equation in the notes. Basically, the unit weights minimize the difference between the weighted average of the pre-treated outcome of control units and the pre-treated outcome of treated units.<br> 
+                        Simply put: Unit weights match the pre-treatment trends between treated & control units. Another way to show how the unit weights work mathematically is the equation in the notes. Basically, the unit weights minimize the difference between the weighted average of the pre-treatment outcome of control units and the pre-treatment outcome of treated units.<br> 
                         This is similar to what synthetic control does, except that we will have a parallel trend because we included an intercept term \( w_{0} \) here.<br> 
-                        The time weights here are used to balance pre-treatment and post-treatment periods for control units. Another way to show how the time weights work mathematically is the equation in the notes. Basically, the times weights minimize the difference between the weighted average of the pre-treated outcome of control units and the post-treated outcome of control units. 
+                        The time weights here are used to balance pre-treatment and post-treatment periods for control units. Another way to show how the time weights work mathematically is the equation in the notes. Basically, the times weights minimize the difference between the weighted average of the pre-treatment outcome of control units and the post-treatment outcome of control units. 
                         <br><br><span style="color:red;">Weight constraints</span>: Constraints for unit weights: \( \sum w_{i} = 1 \) and \( w_{i} > 0 \) \( \forall \) \( i \), or unit weights for all states in each quarter \( t \) sum up to 1. Constraits for time weights: \( \sum \lambda_{t} = 1 \) and \( \lambda_{t} > 0 \) \( \forall \) \( t \), so time weights for all pre-treatment period in each state \( i \) sum up to 1. The procedure of getting unit weights is basically regressing the average outcome of the treated units on the control units. For time weights: regressing average outcome of post-treated control units on pre-treated control units. 
                         <br><span style="color:red;">Final weights</span>: = unit weights * time weights. The weights in SDID estimator makes the 2-way FE regression "local" (1) it puts more weights on (control) units that on average are similar in terms of their past to the treated units. (2) it puts more weights on (pre-treat) periods that are on average similar to the treated periods.
                         <br><span style="color:red;">\( \lambda_{0} \)</span>: It allows the post-treatment period to be above/below all pre-treatment periods. This is helpful to give us a clear positive/negative trend.
@@ -937,7 +937,7 @@
                         The motivation behind this topic is that, income volatility is still prevalent in the US. Income volatility has risen since the 1970s, and it has affected about half the population in 2010. Notably, 37% of US HHs can't come up with a $400 cash or its equivalent to cover emergency bills. A recent FDIC survey shows that 6 million HHs are "unbanked" and 19 million of HHs are "underbanked".<br><br>
                         <span style="color:red;">Banked def:</span>
                         <span style="font-weight:bold;">"Unbanked"</span>:  if no one in the HH held a checking or savings account at a bank or credit union. 
-                        <span style="font-weight:bold;">"underbanked"</span>: The HH in the past 12 months used some credit products that are commonly used unbanked consumers, such as payday loan, pawn shop, and auto title loans. 
+                        <span style="font-weight:bold;">"underbanked"</span>: The HH in the past 12 months used some credit products that are commonly used by unbanked consumers, such as payday loans, pawn shops, and auto title loans. 
                         <br><span style="color:red;">Note:</span> using percentage: 5% of HHs are "unbanked" and 14% of them are "underbanked". 
                         </aside>                             
                     </section>                        
@@ -952,7 +952,7 @@
                         <aside class="notes">
                         Now you may think those HHs who experience income volatility are probably all low income HHs. That's not quite the whole picture. 
                         Here, using Clarity 2015 data as an example, we can see that low income people do most likely experience high income volatility. But wait, the second biggest group who experience high volatility are those who earn high income.<br><br>   
-                        <span style="color:red;">Note:</span> The high income high volatility group means an individual earns beyond third quartile income of $3,524 (based on 2015 data) and has income coefficient of variation beyond 75%.   
+                        <span style="color:red;">Note:</span> The high income high volatility group means an individual earns beyond the third quartile income of $3,524 (based on 2015 data) and has an income coefficient of variation beyond 75%.   
                         </aside>                             
                     </section>
                     
@@ -970,7 +970,7 @@
                         </ul>
                         <!------- speaker  notes ------->
                         <aside class="notes">
-                        You may wonder: why not they just use traditional banks such as credit cards to borrow money as the charges are much lower? Well, we just saw that a 6 million US population is "unbanked", which means they don't have a bank account, so they don't have access to traditional credit. For those who do have bank accounts, they may fear jeopardizing their credit scores by borrowing from banks. So they resort to payday loans, which don't require checking their credit scores. Given how "predatory" the payday loan is, some states passed the extended payment plans to protect the consumers.  
+                        You may wonder: why not they just use traditional banks such as credit cards to borrow money as the charges are much lower? Well, we just saw that a 6 million US population is "unbanked", which means they don't have a bank account, so they don't have access to traditional credit. For those who do have bank accounts, they may fear jeopardizing their credit scores by borrowing from banks. So they resort to payday loans, which don't require checking their credit scores. Given how "predatory" the payday loan is, some states passed extended payment plans to protect the consumers.  
                         </aside>                             
                     </section>                    
                     
@@ -991,7 +991,7 @@
                           </ul>     
                         <!------- speaker  notes ------->
                         <aside class="notes">
-                        This brings me to my research question: how do extended payment plans improve financial health of borrowers facing varying income volatility? As mentioned earlier, this is an extension to the second Chapter. The study contributes to the income volatility and financial health literature. Another addition is that the data used in this study has an extensive coverage since it covers more than 70% of non-prime consumers, and the borrowers include both low and high income earners. The policy implication is that the findings from this research may shed light on financial health related policies such as building better indicators to understand American HH's financial health.                          
+                        This brings me to my research question: how do extended payment plans improve financial health of borrowers facing varying income volatility? As mentioned earlier, this is an extension to the second Chapter. The study contributes to the income volatility and financial health literature. Another addition is that the data used in this study has extensive coverage since it covers more than 70% of non-prime consumers, and the borrowers include both low and high income earners. The policy implication is that the findings from this research may shed light on financial health related policies such as building better indicators to understand American HH's financial health.                          
                         </aside>                             
                     </section>   
                     
@@ -1030,8 +1030,8 @@
                         </p>
                         <!------- speaker  notes ------->
                         <aside class="notes">
-                        I'll also skip the Clarity data and the extended payment plans legal status. What I'd like to add here is the definition of income volatility. There are many ways to quantify income volatility. In my research, I decided to use the income coefficient of variation, or I just call it income CV. We get income CV by dividing the standard deviation of income by the mean of income and multiplying by 100%. So income CV will always be positive, It indicates the magnitude of the changes in income and covers the changes of income in both directions, positive or negative. And the larger the values are, the more volatile the income is. The final data is aggregated at a yearly level for each borrower. So there will be 6 separate sample data, for 2015, 2016, 2017, etc. In 2015, there were about 1500 borrowers in treated states & 4 thousand borrowers in control states. For the rest of the years, the borrowers may increase or decrease a bit.<br><br>
-                        <span style="color:red;">Other income volatility measure:</span> (1) <span style="font-weight: bold;">Income percentage change</span>, shows magnitude & direction. We don't use it because most income does not change over the year, so it doesn't generate enough variation for our analysis. (2) <span style="font-weight: bold;">Spikes and dips</span>, shows magnitude, direction, and frequency. It's a spike if the income is greater than 125% of an individual’s mean income and a dip if the income is less than 75%. We don't use it since interpretation may be not that straightforward: the spikes and dips go both directions.   
+                        I'll also skip the Clarity data and the extended payment plans' legal status. What I'd like to add here is the definition of income volatility. There are many ways to quantify income volatility. In my research, I decided to use the income coefficient of variation, or I just call it income CV. We get income CV by dividing the standard deviation of income by the mean of income and multiplying by 100%. So income CV will always be positive, It indicates the magnitude of the changes in income and covers the changes of income in both directions, positive or negative. And the larger the values are, the more volatile the income is. The final data is aggregated at a yearly level for each borrower. So there will be 6 separate sample data, for 2015, 2016, 2017, etc. In 2015, there were about 1500 borrowers in treated states & 4 thousand borrowers in control states. For the rest of the years, the borrowers may increase or decrease a bit.<br><br>
+                        <span style="color:red;">Other income volatility measure:</span> (1) <span style="font-weight: bold;">Income percentage change</span>, shows magnitude & direction. We don't use it because most income does not change over the year, so it doesn't generate enough variation for our analysis. (2) <span style="font-weight: bold;">Spikes and dips</span>, shows magnitude, direction, and frequency. It's a spike if the income is greater than 125% of an individual’s mean income and a dip if the income is less than 75%. We don't use it since interpretation may be not that straightforward: the spikes and dips go in both directions.   
                         <br><span style="color:red;">Note:</span> Income CV is used in various papers, such as Hannagan and Morduch (2015), which uses the US Financial Diaries data to study income volatility.
                         </aside>                             
                     </section>                                          
@@ -1052,7 +1052,7 @@
                           </ul>
                         <!------- speaker  notes ------->
                         <aside class="notes">
-                        As usual, I also do data-prechecks to make sure the borrowers from control and treated states are comparable. In general, these two groups are similar. For the treated group, the borrowers' financial health variables may have a bit higher values; they may reside a bit longer at current place, and more are likely to be paid monthly. For the control group, the borrowers are more likely to be paid weekly.
+                        As usual, I also do data-prechecks to make sure the borrowers from control and treated states are comparable. In general, these two groups are similar. For the treated group, the borrowers' financial health variables may have a bit higher values; they may reside a bit longer at their current place, and more are likely to be paid monthly. For the control group, the borrowers are more likely to be paid weekly.
                         </aside>                             
                     </section>                     
                     
@@ -1074,8 +1074,8 @@
                         <aside class="notes">
                         To estimate conditional average treatment effect or CATE, I'll need to estimate ATE first. The model I'll be using is double machine learning, or I call it DML.                            
                         The first equation is our main equation: which estimates the treatment effect, \( \tau \), which is the difference between mean treated outcomes and control outcomes, shown in equation 3. The second equation keeps track of the dependence of the treatment variable D on controls X.  This equation is not our main interest, but it is important for removing regularization bias. The confounding factors X affect the policy variable D through function \( m_{0}(X) \) and the outcome variable through function \( g_{0}(X) \). <br>
-                        So the functions \( g_{0}(\cdot) \) and \( m_{0}(\cdot) \) are some non-linear machine learning model, which I'll introduce more later. Y is the financial health variable, D is treatment variable, X is a set of borrowers' features such as age, housing status. And \( \tau \) is the ATE we want to identify.
-                        <br><br><span style="color:red;">Why use DML model?</span> (1) DML is designed as a "causal model" in mind. We can def use it to estimate treatment effect for my purpose. (2) It uses the non-linearity of some ML model, which gives us better estimates. (3) DML is a very elegant model, which uses FWL theorem. It also applies to the type of data I have.   
+                        So the functions \( g_{0}(\cdot) \) and \( m_{0}(\cdot) \) are some non-linear machine learning models, which I'll introduce more later. Y is the financial health variable, D is treatment variable, X is a set of borrowers' features such as age, housing status. And \( \tau \) is the ATE we want to identify.
+                        <br><br><span style="color:red;">Why use DML model?</span> (1) DML is designed with a "causal model" in mind. We can def use it to estimate treatment effects for my purpose. (2) It uses the non-linearity of some ML models, which gives us better estimates. (3) DML is a very elegant model, which uses the FWL theorem. It also applies to the type of data I have.   
                         <br><span style="color:red;">DML assumptions?</span> (1) \( E[\zeta|X, D] = 0 \), (2) \( E[\nu|X] = 0 \).
                         </aside>                             
                     </section>   
@@ -1102,7 +1102,7 @@
                         In residualized y and D: all variance due to X is explained way.
                         That's how in step 2, we can get the causal effect \( \tau \).<br>
                         The machine learning I'll use is random forest. To avoid overfitting, we'll use 5-fold cross-validation, which is a pretty common setting. I use random forest because of its efficiency and great prediction performance. The final ATE is the average of the 5-fold estimates.
-                        <br><br><span style="color:red;">Random forest procedure</span>: (1) Draw a bootstrap sample \( s_{m} \) of the sample size as the data (with replacement). (2) Grow a decision tree on $s_{m}$. In each step, we need to select \( v \) less than \( V \) variables to find the best split. (3) Repeat Step 1 and Step 2 for specified M times. Averaging (or Voting) will take place by averaging (or selecting the majority vote) the decision tree. (4) Average (or select the most voted) prediction result as the final prediction result. Note: The model takes averaging for regressions, and it takes majority vote for classifications.
+                        <br><br><span style="color:red;">Random forest procedure</span>: (1) Draw a bootstrap sample \( s_{m} \) of the sample size as the data (with replacement). (2) Grow a decision tree on $s_{m}$. In each step, we need to select \( v \) less than \( V \) variables to find the best split. (3) Repeat Step 1 and Step 2 for specified M times. Averaging (or Voting) will take place by averaging (or selecting the majority vote) the decision tree. (4) Average (or select the most voted) prediction result as the final prediction result. Note: The model takes averages for regressions, and it takes a majority vote for classifications.
                          <img src="../slides/image/rf.png" alt="rf" class="center" width="500">    
                         </aside>                             
                     </section>
@@ -1154,7 +1154,7 @@
                             </tr>                            
                         </tbody>					
                         </table>                     
-                        <p style="color:darkgray;font-size:16px;text-align: left">Notes: From 2019 to 2020, the number of borrowers reduced by 44%. Therefore, we need to be cautious with the result from 2020. Same for the other 3 outcome variables.</p>
+                        <p style="color:darkgray;font-size:16px;text-align: left">Notes: From 2019 to 2020, the number of borrowers reduced by 44%. Therefore, we need to be cautious with results from 2020. Same for the other 3 outcome variables.</p>
                         <!------- speaker  notes ------->
                         <aside class="notes">
                         This table shows results for variable "amount past due". I'll just use this variable as an example. All results shown here are negative and significant except for 2015. That's probably because most states haven't passed the plans yet. There's no clear pattern of increasing or decreasing. Of course, for 2020 results, we need to take special considerations since most of the year was in COVID-19 shocks.<br>
@@ -1190,7 +1190,7 @@
                         <!------- speaker  notes ------->
                         <aside class="notes">
                         Here are some visualizations for CATE for the variable "amount past due". The overall trend for each year appears to be U-shaped: borrowers at the first quartile gradually receive more and more treatment effect; people who are between the first quartile and median income volatility benefit the most from the plans; people between median and third quartile receive less and less treatment effect until the effect disappears; after the third quartile, people do not seem to receive any treatment effect at all.<br> 
-                        So overall, people whose income volatility is below third quartile do receive a reduction in their amount past due because of extended payment plans.
+                        So overall, people whose income volatility is below the third quartile do receive a reduction in their amount past due because of extended payment plans.
                         </aside>     
                     </section>   
                     
