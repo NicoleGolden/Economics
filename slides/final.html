@@ -363,9 +363,10 @@
                         This DiD model looks similar to the standard DiD model earlier but with an added term. The \( \Delta_{it} \) term here is called "size of move", which is the difference between average milk expenditures in the mover's new state vs old state.
                         By interacting "size of move" with treatment variable, we get \( \beta \), our interest. It measures how much the milk expenditures converge toward the new states’ average. 
                         <br><br>
-                        <span style="color:red;">Note 1:</span> This model uses movers data only.<br>
-                        <span style="color:red;">"size of move"</span>: It's calculated with non-movers data only. To compute state-level average outcomes: first average across HHs in each quarter and each state using sample weights (and info on the number of children), then take an average across time periods. You can simply think of this as expenditure of self regress on expenditure difference of others (who are in your new or old states))<br> 
-                        <span style="color:red;">\( \beta \) </span>: It measures the fraction of difference between new state and old state that has been covered. This way, the size of the jump after the move measures the share of the average difference between areas that is attributable to the current environment.)
+                        <span style="color:red;">Note 1:</span> This model uses movers data only.
+                        <br><span style="color:red;">"size of move"</span>: It's calculated with non-movers data only. To compute state-level average outcomes: first average across HHs in each quarter and each state, then take an average across time periods. You can simply think of this as expenditure of self regress on expenditure difference of others who are in your new or old states. So outcome variable is mover's expenditures, and "size of move" is non-movers' state-level averages of expenditures, or "new state - old state" expenditure differences.
+                        <br><span style="color:red;">\( \beta \) </span>: It measures the fraction of difference between new state and old state that has been covered. This way, the size of the jump after the move measures the share of the average difference between areas that is attributable to the current environment.)
+                        <br><span style="color:red;">Note</span>: When calcualte state-level average, use sample weights and info on the number of children in the first step.
                         </aside>                             
                     </section>      
 
