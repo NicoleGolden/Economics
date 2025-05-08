@@ -32,24 +32,157 @@
         <!-- Link favicon -->
         <link rel="icon" href="assets/image/favicon.png">
                 
-        <!--------Page style:start here-------->
+        <!--------Page style: start here-------->
         <style>
-             h2, h3, h4, h5, h6, p {
-                font-family:Helvetica;                    
+             h2, h3, h4, h5, h6{
+                font-family: sans-serif;                   
                 font-weight:lighter;   
             }
 
             h1 {
-                font-size: 18pt;
+                font-family: sans-serif;
+                font-size: 21pt;
+                color:#37352F;
             }
 
             h2 {
                 font-size: 16pt;
             }
             p {
-                font-size: 20px;                                
-                line-height:180%;
+                font-family: sans-serif;      
+                font-size: 18.6px;                                
+                line-height:150%;
+                color:#808080;
+                font-weight: 400;
             }
+            hr.solid {
+              border: none;
+              height: 1px;
+              background-color: #bbb;
+              transform: scaleY(0.8); /* visually makes it thinner */
+              width: 50%;        /* Adjust the line length */
+              margin: 0 auto;     /* Center the line horizontally */    
+            }
+
+            .two-column {
+              display: flex;
+              flex-wrap: wrap;       /* Makes it responsive */
+              gap: 2rem;
+              align-items: center;
+            }
+            
+            .column {
+              flex:1 1 300px;        /* Each column takes up space */
+            }
+            
+            /* Customize my-intro columns */
+            #my-intro .left {
+               flex: 1 1 200px;    /* Left column takes less space */
+            }
+
+            #my-intro .right {
+              flex: 4 1 300px;  /* Right column takes more space */
+            }
+
+            .section-image {
+              width: 100%;
+              max-width: 500px;
+              height: auto;
+              border-radius: 8px;
+              object-fit: cover;
+            }
+            
+            .intro a {
+              color: #f57676;
+              font-family: monospace;
+              background-color: #f4f4f4;
+              padding: 2px 4px;
+              border-radius: 4px;
+              text-decoration: none;
+            }
+            .intro a:hover {
+              background-color: #eaeaea;
+              text-decoration: underline;
+             text-decoration: none; 
+            }
+            
+            /* resume clickable button */
+            .resume-button {
+              display: inline-block;
+              padding: 2px 16px !important;  /* Add padding around the text */
+              background-color: white !important;  /* Button background color */
+              color: #487ca5 !important;  /* Notion default blue text */
+              text-align: center;
+              text-decoration: none;
+              font-size:18px !important;
+              border-radius: 8px;  /* Rounded corners for the button */
+              box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+              transition: background-color 0.3s ease, color 0.3s ease !important;
+              font-family: sans-serif !important;  
+              font-weight:500 !important;
+            }
+
+            .resume-button:hover {
+              background-color: #edf6fc !important;  /* Gray background on hover */
+            }
+            
+            /* github clickable button */
+            .github-button {
+              display: inline-block;
+              padding: 2px 16px !important;  /* Add padding around the text */
+              background-color: white !important;  /* Button background color */
+              color: #cc782f !important;  /* Notion default blue text */
+              text-align: center;
+              text-decoration: none;
+              font-size:18px !important;
+              border-radius: 8px;  /* Rounded corners for the button */
+              box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+              transition: background-color 0.3s ease, color 0.3s ease !important;
+              font-family: sans-serif !important;  
+              font-weight:500 !important;
+            }
+
+            .github-button:hover {
+              background-color: #f2e9e1 !important;  /* Gray background on hover */
+            }
+            
+            
+            /* contact clickable button */
+            .contact-button {
+              display: inline-block;
+              padding: 2px 16px !important;  /* Add padding around the text */
+              background-color: white !important;  /* Button background color */
+              color: #6940A5 !important;  /* Notion default blue text */
+              text-align: center;
+              text-decoration: none;
+              font-size:18px !important;
+              border-radius: 8px;  /* Rounded corners for the button */
+              box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+              transition: background-color 0.3s ease, color 0.3s ease !important;
+              font-family: sans-serif !important;  
+              font-weight:500 !important;
+            }
+
+            .contact-button:hover {
+              background-color: #f1ebfa !important;  /* Gray background on hover */
+            }
+
+            
+            /* Navigation bar container */
+            nav a {
+              font-family: sans-serif !important;  /* Change font */
+              font-size: 20px;                        /* Adjust font size */
+              color: #333333 !important;                         /* Change text color */
+              text-decoration: none;                  /* Remove underline (optional) */
+              padding: 0.5em 1em;                     /* Optional spacing */
+              font-weight: 350;
+            }
+
+            /* Optional: Change link color on hover */
+            nav a:hover {
+              color: #487ca5 !important;                         /* New color when hovered */
+            }
+
         </style>
     </head>     
             
@@ -70,8 +203,7 @@
                         <ul class="navbar">                     
                             <li><a href="https://nicolegolden.github.io/Economics/">Home</a></li>
                             <li><a href="../research/research.html">Research</a></li> 
-                            <li><a href="../cv/cv.html">CV</a></li> 
-                            <li><a href="../data/data.html">Data is Art</a></li> 
+                            <li><a href="../cv/cv.html">Resume</a></li> 
                         </ul> 
                     </div>         
                 </nav>     
@@ -81,22 +213,90 @@
             <section class="intro">         
                 <div class="container"> 
                         
-                    <!--Insert image: profile-->            
-                    <img src="assets/image/circle_large.png" width="280">
-                    
-                    <!--------Introduction: start here-------->            
-                    <p>
-                        I am an economist from the University of California, Irvine (Ph.D. 2024). My research focuses on using econometric and machine learning techniques to address a wide range of economic questions. My empirical work spans topics relevant to both private businesses — such as household finance, retail, and consumer spending — and public policy, including education.
+                    <div class="two-column" id="my-intro">
+                        <div class="column left">
+                        <img src="../assets/image/circle_large.png" alt="prof photo" width="300px"/>
+                      </div>
+
+                      <div class="column right">
+    				<p>
+                        Hi there! I’m a curious blend of economist, data scientist, and machine learning researcher — freshly minted with a Ph.D. from the University of California, Irvine (2024). 
                     </p>
                     <p>
-                        I have collaborated with academic institutions (UCI Deep Data Lab), government agencies (Census Bureau), international NGOs (UN and World Bank), and private consulting firms.  If you'd like to connect or discuss my work, feel free to contact me at <a href="mailto:qinqiy1@uci.edu">qinqiy1@uci.edu</a>.
-                    </p> 
-                </div>     
-            </section> 
+                        I love diving into data to tackle big (and sometimes small-but-mighty) socioeconomic questions. I’m a flexible problem solver, just as comfortable analyzing how people manage their money as I am exploring how education policies work, assessing community vulnerability, or designing tools to spot data quality issues.
+                    </p>
+                    <p>
+                        Over the years, I’ve worn many hats — from crunching numbers in academia, to digging into government stats at the Census Bureau, to partnering with global orgs like the UN and World Bank, and advising through private consulting gigs.
+                    </p>
+                    <p>
+                        If you're up for <a href="mailto:qinqiy1@uci.edu">a chat</a> about exciting job opportunities, research, or potential collaborations — I’d love to hear from you!
+                    </p>
+                      </div>
+                       </div>
+                        <br>
+                     <!---horizontal line---->
+                    <hr class="solid">
+
+                    <!-----insert "Resume" column----->
+                    <div class="two-column">
+                      <div class="column left">
+                    <a href="../cv/cv.html" class="resume-button">Resume</a>
+                          <br>
+                          <br>
+                          <h1>6+ Years of Research, Insights, and Impact</h1>
+                        <p>
+                            I’m a dreamer and a <em>doer</em>. I have a strong background in R, Python, econometrics, and machine learning, and I’m always learning new tools to solve new problems. I enjoy turning complex data into clear insights and love finding simple ways to explain big ideas to different audiences.
+                          </p>                      
+                        </div>
+                      <div class="column right">
+                        <img src="../assets/image/ride a motorcycle.png" alt="ride a motocycle" width="400px"/>
+                      </div>
+                    </div>
+                    
+                     <!-----insert "Github" column----->
+                    <div class="two-column">
+                      <div class="column left">
+                        <img src="../assets/image/dream.png" alt="dream" width="450px"/>
+                      </div>                        
+                      <div class="column right">
+                    <a href="https://github.com/NicoleGolden" class="github-button" target= "_blank">GitHub</a>
+                          <br>
+                          <br>
+                          <h1>Check Out My Work</h1>
+                        <p>
+                          I’ve been busy with plenty of recent (but private) projects — if you’re curious or want to hear more, just drop me an email!
+                        </p>
+                      </div>
+                    </div>
+                    
+                    
+                    <!-----insert "Contact" column----->
+                    <div class="two-column">
+                      <div class="column left">
+                    <a href="mailto:qinqiy1@uci.edu" class="contact-button">Contact</a>
+                          <br>
+                          <br>
+                          <h1>Let’s Connect</h1>
+                        <p>
+                          Have an exciting role or project in mind? I’m all ears — feel free to drop me an email!
+                        </p>
+                      </div>
+                      <div class="column right">
+                        <img src="../assets/image/send new email.png" alt="email" width="400px"/>
+                      </div>
+                    </div>
+                </div>    
                 
+           
+            
+            </section> 
+  
+            
+        
             <!--Insert: page break-->
             <center>
-                
+            <br>    
+            <br>    
                 <a href="https://www.google.com/maps/place/Washington,+DC/@38.8937255,-77.0969765,12z/data=!3m1!4b1!4m6!3m5!1s0x89b7c6de5af6e45b:0xc2524522d4885d2a!8m2!3d38.9071923!4d-77.0368707!16zL20vMHJoNms?entry=ttu" target=_blank><img src="../assets/image/1_location.svg" width="35"></a> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
                 
                 <a href="mailto:qinqiy1@uci.edu"><img src="../assets/image/2_email.svg" width="35"></a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
@@ -104,7 +304,7 @@
                 <a href="https://github.com/NicoleGolden" target=_blank><img src="../assets/image/3_github.svg" width="35"></a> 
                  <br><br><br><br><br>
             </center>
-                    
+            
         </main>     
     </body> 
 </html>
