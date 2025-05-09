@@ -55,6 +55,8 @@
                 color:#808080;
                 font-weight: 400;
             }
+            
+            /* tailor horizontal line style */
             hr.solid {
               border: none;
               height: 1px;
@@ -63,18 +65,43 @@
               width: 50%;        /* Adjust the line length */
               margin: 0 auto;     /* Center the line horizontally */    
             }
-
+            
+            /* tailor 2 column that alternate iamge & texts  */
+             /*  this way it works for mobile phone too */
             .two-column {
               display: flex;
-              flex-wrap: wrap;       /* Makes it responsive */
+              flex-direction: column;  /* Default: stack on mobile */
               gap: 2rem;
               align-items: center;
+              margin-bottom: 2em;
             }
-            
+
             .column {
-              flex:1 1 300px;        /* Each column takes up space */
+              flex: 1 1 300px;
+              width: 100%;
+              text-align: center;
             }
-            
+
+            /* Only apply horizontal layout on wider screens */
+            @media (min-width: 768px) {
+              .two-column {
+                flex-direction: row;
+                align-items: center;
+              }
+
+              .column {
+                width: auto;
+                text-align: left;
+              }
+
+              .column.left {
+                padding-right: 1rem;
+              }
+
+              .column.right {
+                padding-left: 1rem;
+              }
+            }
             /* Customize my-intro columns */
             #my-intro .left {
                flex: 1 1 200px;    /* Left column takes less space */
@@ -83,7 +110,7 @@
             #my-intro .right {
               flex: 4 1 300px;  /* Right column takes more space */
             }
-
+            
             .section-image {
               width: 100%;
               max-width: 500px;
@@ -171,7 +198,7 @@
             /* Navigation bar container */
             nav a {
               font-family: sans-serif !important;  /* Change font */
-              font-size: 18px;                        /* Adjust font size */
+              font-size: 16px;                        /* Adjust font size */
               color: #333333 !important;                         /* Change text color */
               text-decoration: none;                  /* Remove underline (optional) */
               padding: 0.5em 1em;                     /* Optional spacing */
